@@ -9,7 +9,7 @@ Package.onUse(function(api) {
 
   api.use([
     "jquery@1.0.1",
-    "linto:fontawesome@4.2.2"
+    "fortawesome:fontawesome@4.2.0"
   ], "client");
 
   api.addFiles([
