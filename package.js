@@ -2,7 +2,7 @@ Package.describe({
   name: "uzumaxy:froala",
   summary: "A beautiful jQuery WYSIWYG HTML text editor.",
   version: "1.2.4",
-  git: "https://github.com/uzumaxy/meteor-froala/"
+  git: "https://github.com/froala/meteor-froala/"
 });
 
 Package.onUse(function(api) {
