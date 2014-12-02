@@ -8,7 +8,7 @@ Check out the [Froala editor homepage](https://editor.froala.com/) for more deta
 How do I use it?
 ================
 
-Open terminal in your meteor project directory and execute following command: `meteor add uzumaxy:froala` 
+Open terminal in your meteor project directory and execute following command: `meteor add froala:editor`
 
 
 License
