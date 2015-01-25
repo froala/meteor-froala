@@ -20,3 +20,8 @@ You may use the editor for non-commercial websites for free under the [Creative 
 
 Froala Editor has [4 different licenses](http://editor.froala.com/download/) for commercial use.
 For details please see [License Agreement](http://editor.froala.com/license).
+
+For Package Maintainers
+=======================
+
+When upgrading the froala_editor_ie8.min.js file,  paste the minified code into the froala_editor_ie8_wrapped.min.js file.

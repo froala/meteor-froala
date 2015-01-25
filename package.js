@@ -20,7 +20,7 @@ Package.onUse(function(api) {
 
     // JS
     "froala:editor/js/froala_editor.min.js",
-    "froala:editor/js/froala_editor_ie8.min.js",
+    "froala:editor/js/froala_editor_ie8_wrapped.min.js",
 
     // JS Plugins
     "froala:editor/js/plugins/block_styles.min.js",
