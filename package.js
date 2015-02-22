@@ -1,12 +1,11 @@
 Package.describe({
   name: "froala:editor",
-  summary: "A beautiful jQuery WYSIWYG HTML text editor.",
-  version: "1.2.5_2",
+  summary: "A beautiful jQuery WYSIWYG HTML text editor. High performance and modern design make it easy to use for developers and loved by users.",
+  version: "1.2.6",
   git: "https://github.com/froala/meteor-froala/"
 });
 
 Package.onUse(function(api) {
-
   api.use([
     "jquery@1.0.1",
     "fortawesome:fontawesome@4.2.0"
@@ -14,9 +13,9 @@ Package.onUse(function(api) {
 
   api.addFiles([
     // CSS
-    "froala:editor/css/froala_content.css",
-    "froala:editor/css/froala_editor.css",
-    "froala:editor/css/froala_style.css",
+    "froala:editor/css/froala_content.min.css",
+    "froala:editor/css/froala_editor.min.css",
+    "froala:editor/css/froala_style.min.css",
 
     // JS
     "froala:editor/js/froala_editor.min.js",
