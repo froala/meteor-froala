@@ -2,7 +2,7 @@ meteor-froala
 =============
 
 A beautiful jQuery WYSIWYG HTML text editor for [Meteor](https://github.com/meteor/meteor).
-Check out the [Froala editor homepage](https://editor.froala.com/) for more details.
+Check out the [Froala editor homepage](https://froala.com/wysiwyg-editor) for more details.
 
 
 How do I use it?
@@ -16,10 +16,8 @@ License
 
 The `meteor-froala` project is under MIT license.
 
-You may use the editor for non-commercial websites for free under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nc-nd/4.0/).
-
-Froala Editor has [4 different licenses](http://editor.froala.com/download/) for commercial use.
-For details please see [License Agreement](http://editor.froala.com/license).
+Froala Editor has [4 different licenses](https://froala.com/wysiwyg-editor/pricing/) for commercial use.
+For details please see [License Agreement](https://froala.com/wysiwyg-editor/terms).
 
 For Package Maintainers
 =======================
