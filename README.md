@@ -16,7 +16,7 @@ License
 
 The `meteor-froala` project is under MIT license.
 
-Froala Editor has [4 different licenses](https://froala.com/wysiwyg-editor/pricing/) for commercial use.
+Froala Editor has [3 different licenses](https://froala.com/wysiwyg-editor/pricing/) for commercial use.
 For details please see [License Agreement](https://froala.com/wysiwyg-editor/terms).
 
 For Package Maintainers
