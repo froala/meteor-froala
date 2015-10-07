@@ -2,11 +2,11 @@
   "dependencies": [
     [
       "fortawesome:fontawesome",
-      "4.2.0_2"
+      "4.4.0"
     ],
     [
       "jquery",
-      "1.0.1"
+      "1.11.0"
     ],
     [
       "meteor",
