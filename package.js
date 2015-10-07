@@ -1,13 +1,13 @@
 Package.describe({
   name: "froala:editor",
   summary: "A beautiful jQuery WYSIWYG HTML rich text editor.",
-  version: "2.0.0-rc.3",
+  version: "2.0.0-rc.3-1",
   git: "https://github.com/froala/meteor-froala/"
 });
 
 Package.onUse(function(api) {
   api.use([
-    "jquery@1.11.0",
+    "jquery@1.0.1",
     "fortawesome:fontawesome@4.4.0"
   ], "client");
 
