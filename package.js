@@ -17,17 +17,17 @@ Package.onUse(function(api) {
     "froala:editor/css/froala_style.min.css",
 
     // CSS Plugins
-    "froala:editor/css/char_counter.min.css",
-    "froala:editor/css/code_view.min.css",
-    "froala:editor/css/colors.min.css",
-    "froala:editor/css/emoticons.min.css",
-    "froala:editor/css/file.min.css",
-    "froala:editor/css/fullscreen.min.css",
-    "froala:editor/css/image_manager.min.css",
-    "froala:editor/css/image.min.css",
-    "froala:editor/css/line_breaker.min.css",
-    "froala:editor/css/table.min.css",
-    "froala:editor/css/video.min.css",
+    "froala:editor/css/plugins/char_counter.min.css",
+    "froala:editor/css/plugins/code_view.min.css",
+    "froala:editor/css/plugins/colors.min.css",
+    "froala:editor/css/plugins/emoticons.min.css",
+    "froala:editor/css/plugins/file.min.css",
+    "froala:editor/css/plugins/fullscreen.min.css",
+    "froala:editor/css/plugins/image_manager.min.css",
+    "froala:editor/css/plugins/image.min.css",
+    "froala:editor/css/plugins/line_breaker.min.css",
+    "froala:editor/css/plugins/table.min.css",
+    "froala:editor/css/plugins/video.min.css",
 
     // JS
     "froala:editor/js/froala_editor.min.js",
