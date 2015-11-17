@@ -18,7 +18,6 @@ Package.onUse(function(api) {
 
     // CSS Plugins
     "froala:editor/css/plugins/char_counter.min.css",
-    "froala:editor/css/plugins/code_beautifier.min.css",
     "froala:editor/css/plugins/code_view.min.css",
     "froala:editor/css/plugins/colors.min.css",
     "froala:editor/css/plugins/emoticons.min.css",
@@ -35,6 +34,7 @@ Package.onUse(function(api) {
 
     // JS Plugins
     "froala:editor/js/plugins/align.min.js",
+    "froala:editor/js/plugins/char_beautifier.min.js",
     "froala:editor/js/plugins/char_counter.min.js",
     "froala:editor/js/plugins/code_view.min.js",
     "froala:editor/js/plugins/colors.min.js",
