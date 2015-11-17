@@ -34,8 +34,8 @@ Package.onUse(function(api) {
 
     // JS Plugins
     "froala:editor/js/plugins/align.min.js",
-    "froala:editor/js/plugins/char_beautifier.min.js",
     "froala:editor/js/plugins/char_counter.min.js",
+    "froala:editor/js/plugins/code_beautifier.min.js",
     "froala:editor/js/plugins/code_view.min.js",
     "froala:editor/js/plugins/colors.min.js",
     "froala:editor/js/plugins/emoticons.min.js",
