@@ -1,7 +1,7 @@
 Package.describe({
   name: "froala:editor",
   summary: "A beautiful jQuery WYSIWYG HTML rich text editor.",
-  version: "2.0.1",
+  version: "2.0.1_1",
   git: "https://github.com/froala/meteor-froala/"
 });
 
@@ -13,49 +13,49 @@ Package.onUse(function(api) {
 
   api.addFiles([
     // CSS
-    "froala:editor/css/froala_editor.min.css",
-    "froala:editor/css/froala_style.min.css",
+    "assets/css/froala_editor.min.css",
+    "assets/css/froala_style.min.css",
 
     // CSS Plugins
-    "froala:editor/css/plugins/char_counter.min.css",
-    "froala:editor/css/plugins/code_view.min.css",
-    "froala:editor/css/plugins/colors.min.css",
-    "froala:editor/css/plugins/emoticons.min.css",
-    "froala:editor/css/plugins/file.min.css",
-    "froala:editor/css/plugins/fullscreen.min.css",
-    "froala:editor/css/plugins/image_manager.min.css",
-    "froala:editor/css/plugins/image.min.css",
-    "froala:editor/css/plugins/line_breaker.min.css",
-    "froala:editor/css/plugins/table.min.css",
-    "froala:editor/css/plugins/video.min.css",
+    "assets/css/plugins/char_counter.min.css",
+    "assets/css/plugins/code_view.min.css",
+    "assets/css/plugins/colors.min.css",
+    "assets/css/plugins/emoticons.min.css",
+    "assets/css/plugins/file.min.css",
+    "assets/css/plugins/fullscreen.min.css",
+    "assets/css/plugins/image_manager.min.css",
+    "assets/css/plugins/image.min.css",
+    "assets/css/plugins/line_breaker.min.css",
+    "assets/css/plugins/table.min.css",
+    "assets/css/plugins/video.min.css",
 
     // JS
-    "froala:editor/js/froala_editor.min.js",
+    "assets/js/froala_editor.min.js",
 
     // JS Plugins
-    "froala:editor/js/plugins/align.min.js",
-    "froala:editor/js/plugins/char_counter.min.js",
-    "froala:editor/js/plugins/code_beautifier.min.js",
-    "froala:editor/js/plugins/code_view.min.js",
-    "froala:editor/js/plugins/colors.min.js",
-    "froala:editor/js/plugins/emoticons.min.js",
-    "froala:editor/js/plugins/entities.min.js",
-    "froala:editor/js/plugins/file.min.js",
-    "froala:editor/js/plugins/font_family.min.js",
-    "froala:editor/js/plugins/font_size.min.js",
-    "froala:editor/js/plugins/fullscreen.min.js",
-    "froala:editor/js/plugins/image.min.js",
-    "froala:editor/js/plugins/image_manager.min.js",
-    "froala:editor/js/plugins/inline_style.min.js",
-    "froala:editor/js/plugins/line_breaker.min.js",
-    "froala:editor/js/plugins/link.min.js",
-    "froala:editor/js/plugins/lists.min.js",
-    "froala:editor/js/plugins/paragraph_format.min.js",
-    "froala:editor/js/plugins/paragraph_style.min.js",
-    "froala:editor/js/plugins/quote.min.js",
-    "froala:editor/js/plugins/save.min.js",
-    "froala:editor/js/plugins/table.min.js",
-    "froala:editor/js/plugins/url.min.js",
-    "froala:editor/js/plugins/video.min.js"
+    "assets/js/plugins/align.min.js",
+    "assets/js/plugins/char_counter.min.js",
+    "assets/js/plugins/code_beautifier.min.js",
+    "assets/js/plugins/code_view.min.js",
+    "assets/js/plugins/colors.min.js",
+    "assets/js/plugins/emoticons.min.js",
+    "assets/js/plugins/entities.min.js",
+    "assets/js/plugins/file.min.js",
+    "assets/js/plugins/font_family.min.js",
+    "assets/js/plugins/font_size.min.js",
+    "assets/js/plugins/fullscreen.min.js",
+    "assets/js/plugins/image.min.js",
+    "assets/js/plugins/image_manager.min.js",
+    "assets/js/plugins/inline_style.min.js",
+    "assets/js/plugins/line_breaker.min.js",
+    "assets/js/plugins/link.min.js",
+    "assets/js/plugins/lists.min.js",
+    "assets/js/plugins/paragraph_format.min.js",
+    "assets/js/plugins/paragraph_style.min.js",
+    "assets/js/plugins/quote.min.js",
+    "assets/js/plugins/save.min.js",
+    "assets/js/plugins/table.min.js",
+    "assets/js/plugins/url.min.js",
+    "assets/js/plugins/video.min.js"
   ], ["client"]);
 });
