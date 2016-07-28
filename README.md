@@ -1,18 +1,19 @@
-meteor-froala
-=============
+# Meteor Froala WYSIWYG HTML Editor
 
-A beautiful jQuery WYSIWYG HTML text editor for [Meteor](https://github.com/meteor/meteor).
+>A beautiful jQuery WYSIWYG HTML text editor for [Meteor](https://github.com/meteor/meteor).
 Check out the [Froala editor homepage](https://froala.com/wysiwyg-editor) for more details.
 
 
-How do I use it?
-================
+## How do I use it?
 
-Open terminal in your meteor project directory and execute following command: `meteor add froala:editor`
+Open terminal in your meteor project directory and execute following command: 
+
+```bash
+meteor add froala:editor
+```
 
 
-License
-=======
+## License
 
 The `meteor-froala` project is under MIT license. However, in order to use Froala WYSIWYG HTML Editor plugin you should purchase a license for it.
 
