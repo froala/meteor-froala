@@ -61,7 +61,7 @@ Package.onUse(function(api) {
     "assets/js/plugins/quick_insert.min.js",
     "assets/js/plugins/quote.min.js",
     "assets/js/plugins/save.min.js",
-    "assets/js/plugins/special_characters.min.js"
+    "assets/js/plugins/special_characters.min.js",
     "assets/js/plugins/table.min.js",
     "assets/js/plugins/url.min.js",
     "assets/js/plugins/video.min.js"
