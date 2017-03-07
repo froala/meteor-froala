@@ -1,6 +1,6 @@
 # Meteor Froala WYSIWYG HTML Editor
 
->A beautiful jQuery WYSIWYG HTML text editor for [Meteor](https://github.com/meteor/meteor).
+>A beautiful Javascript WYSIWYG HTML text editor for [Meteor](https://github.com/meteor/meteor).
 Check out the [Froala editor homepage](https://froala.com/wysiwyg-editor) for more details.
 
 
