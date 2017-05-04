@@ -1,7 +1,7 @@
 Package.describe({
   name: "froala:editor",
   summary: "A beautiful jQuery WYSIWYG HTML rich text editor.",
-  version: "2.5.1",
+  version: "2.6.0",
   git: "https://github.com/froala/meteor-froala/"
 });
 
@@ -30,6 +30,7 @@ Package.onUse(function(api) {
     "assets/css/plugins/line_breaker.min.css",
     "assets/css/plugins/quick_insert.min.css",
     "assets/css/plugins/special_characters.min.css",
+    "assets/css/plugins/spell_checker.min.css",
     "assets/css/plugins/table.min.css",
     "assets/css/plugins/video.min.css",
 
@@ -51,6 +52,7 @@ Package.onUse(function(api) {
     "assets/js/plugins/fullscreen.min.js",
     "assets/js/plugins/help.min.js",
     "assets/js/plugins/image.min.js",
+    "assets/js/plugins/image_aviary.min.js",
     "assets/js/plugins/image_manager.min.js",
     "assets/js/plugins/inline_style.min.js",
     "assets/js/plugins/line_breaker.min.js",
@@ -58,12 +60,15 @@ Package.onUse(function(api) {
     "assets/js/plugins/lists.min.js",
     "assets/js/plugins/paragraph_format.min.js",
     "assets/js/plugins/paragraph_style.min.js",
+    "assets/js/plugins/print.min.js",
     "assets/js/plugins/quick_insert.min.js",
     "assets/js/plugins/quote.min.js",
     "assets/js/plugins/save.min.js",
     "assets/js/plugins/special_characters.min.js",
+    "assets/js/plugins/spell_checker.min.js",
     "assets/js/plugins/table.min.js",
     "assets/js/plugins/url.min.js",
-    "assets/js/plugins/video.min.js"
+    "assets/js/plugins/video.min.js",
+    "assets/js/plugins/word_paste.min.js"
   ], ["client"]);
 });
