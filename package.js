@@ -72,7 +72,7 @@ Package.onUse(function(api) {
     "assets/js/plugins/word_paste.min.js",
 
     // 3rd Party
-    "assets/js/plugins/image_aviary.min.js",
+    "assets/js/third_party/image_aviary.min.js",
     "assets/js/third_party/spell_checker.min.js"
   ], ["client"]);
 });
