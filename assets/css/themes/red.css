@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.6.6 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.0 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2017 Froala Labs
  */
@@ -22,9 +22,9 @@
 }
 .red-theme.fr-box.fr-basic .fr-element {
   color: #000000;
-  padding: 10px;
+  padding: 16px;
   overflow-x: auto;
-  min-height: 40px;
+  min-height: 52px;
 }
 .red-theme .fr-element {
   -webkit-user-select: auto;
@@ -192,6 +192,15 @@
 }
 .red-theme.fr-popup .fr-colors-tabs .fr-colors-tab.fr-selected-tab {
   color: #ffca28;
+}
+.red-theme.fr-popup .fr-color-hex-layer .fr-input-line {
+  padding: 8px 0 0;
+}
+.red-theme.fr-popup .fr-color-hex-layer .fr-action-buttons button {
+  background-color: #ffca28;
+}
+.red-theme.fr-popup .fr-color-hex-layer .fr-action-buttons button:hover {
+  background-color: #f4b800;
 }
 .red-theme.fr-popup .fr-color-set {
   line-height: 0;
@@ -475,7 +484,7 @@
   top: -16px;
 }
 .red-theme .fr-qi-helper {
-  padding-left: 10px;
+  padding-left: 16px;
 }
 .red-theme .fr-qi-helper a.fr-btn.fr-floating-btn {
   color: #ffffff;
@@ -654,6 +663,24 @@
 }
 .red-theme .fr-view .fr-text-bordered {
   padding: 10px 0;
+}
+.red-theme .fr-view .fr-img-caption .fr-img-wrap {
+  margin: auto;
+}
+.red-theme .fr-view .fr-img-caption .fr-img-wrap img {
+  margin: auto;
+}
+.red-theme .fr-view .fr-img-caption .fr-img-wrap > span {
+  margin: auto;
+}
+.red-theme .fr-element .fr-embedly::after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.red-theme.fr-box .fr-embedly-resizer {
+  border: solid 1px #ffca28;
 }
 .red-theme .examples-variante > a {
   font-size: 14px;
