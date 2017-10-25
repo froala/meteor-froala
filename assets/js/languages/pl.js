@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2017 Froala Labs
  */
@@ -64,6 +64,7 @@ $.FE.LANGUAGE['pl'] = {
     "Colors": "Kolory",
     "Background": "T\u0142o",
     "Text": "Tekstu",
+    "HEX Color": "Sześciokąt",
 
     // Paragraphs
     "Paragraph Format": "Formaty",
@@ -125,6 +126,8 @@ $.FE.LANGUAGE['pl'] = {
     "Width": "Szeroko\u015b\u0107",
     "Height": "Wysoko\u015b\u0107",
     "Something went wrong. Please try again.": "Co\u015b posz\u0142o nie tak. Prosz\u0119 spr\u00f3buj ponownie.",
+    "Image Caption": "Podpis obrazu",
+    "Advanced Edit": "Zaawansowana edycja",
 
     // Video
     "Insert Video": "Wstaw wideo",
@@ -253,7 +256,57 @@ $.FE.LANGUAGE['pl'] = {
     "Decrease": "Zmniejszenie",
 
     // Quick Insert
-    "Quick Insert": "Szybkie wstaw"
+    "Quick Insert": "Szybkie wstaw",
+
+    // Spcial Characters
+    "Special Characters": "Znaki specjalne",
+    "Latin": "Łacina",
+    "Greek": "Grecki",
+    "Cyrillic": "Cyrylica",
+    "Punctuation": "Interpunkcja",
+    "Currency": "Waluta",
+    "Arrows": "Strzałki",
+    "Math": "Matematyka",
+    "Misc": "Misc",
+
+    // Print.
+    "Print": "Wydrukować",
+
+    // Spell Checker.
+    "Spell Checker": "Sprawdzanie pisowni",
+
+    // Help
+    "Help": "Wsparcie",
+    "Shortcuts": "Skróty",
+    "Inline Editor": "Edytor w wierszu",
+    "Show the editor": "Pokazać edytor",
+    "Common actions": "Wspólne działania",
+    "Copy": "Kopiuj",
+    "Cut": "Ciąć",
+    "Paste": "Pasta",
+    "Basic Formatting": "Podstawowe formatowanie",
+    "Increase quote level": "Zwiększyć poziom notowań",
+    "Decrease quote level": "Zmniejszyć poziom notowań",
+    "Image / Video": "Obraz / wideo",
+    "Resize larger": "Zmienić rozmiar większy",
+    "Resize smaller": "Zmienić rozmiar mniejszy",
+    "Table": "Stół",
+    "Select table cell": "Wybierz komórkę tabeli",
+    "Extend selection one cell": "Przedłużyć wybór jednej komórki",
+    "Extend selection one row": "Przedłużyć wybór jednego rzędu",
+    "Navigation": "Nawigacja",
+    "Focus popup / toolbar": "Focus popup / toolbar",
+    "Return focus to previous position": "Powrót do poprzedniej pozycji",
+
+    // Embed.ly
+    "Embed URL": "Osadzaj url",
+    "Paste in a URL to embed": "Wklej w adresie URL do osadzenia",
+
+    // Word Paste.
+    "The pasted content is coming from a Microsoft Word document. Do you want to keep the format or clean it up?": "Wklejana treść pochodzi z dokumentu programu microsoft. czy chcesz zachować format lub oczyścić go?",
+    "Keep": "Trzymać",
+    "Clean": "Czysty",
+    "Word Paste Detected": "Wykryto wklejkę słów"
   },
   direction: "ltr"
 };

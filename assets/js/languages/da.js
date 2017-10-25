@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2017 Froala Labs
  */
@@ -64,6 +64,7 @@ $.FE.LANGUAGE['da'] = {
     "Colors": "Farver",
     "Background": "Baggrunds",
     "Text": "Tekst",
+    "HEX Color": "Hex farve",
 
     // Paragraphs
     "Paragraph Format": "S\u00e6tning format",
@@ -125,6 +126,8 @@ $.FE.LANGUAGE['da'] = {
     "Width": "Bredde",
     "Height": "H\u00f8jde",
     "Something went wrong. Please try again.": "Noget gik galt. Pr\u00f8v igen.",
+    "Image Caption": "Billedtekst",
+    "Advanced Edit": "Avanceret redigering",
 
     // Video
     "Insert Video": "Inds\u00e6t video",
@@ -253,7 +256,57 @@ $.FE.LANGUAGE['da'] = {
     "Decrease": "Mindsk",
 
     // Quick Insert
-    "Quick Insert": "Hurtig indsats"
+    "Quick Insert": "Hurtig indsats",
+
+    // Spcial Characters
+    "Special Characters": "Specialtegn",
+    "Latin": "Latin",
+    "Greek": "Græsk",
+    "Cyrillic": "Kyrillisk",
+    "Punctuation": "Tegnsætning",
+    "Currency": "Betalingsmiddel",
+    "Arrows": "Pile",
+    "Math": "Matematik",
+    "Misc": "Misc",
+
+    // Print.
+    "Print": "Print",
+
+    // Spell Checker.
+    "Spell Checker": "Stavekontrol",
+
+    // Help
+    "Help": "Hjælp",
+    "Shortcuts": "Genveje",
+    "Inline Editor": "Inline editor",
+    "Show the editor": "Vis redaktøren",
+    "Common actions": "Fælles handlinger",
+    "Copy": "Kopi",
+    "Cut": "Skære",
+    "Paste": "Sæt ind",
+    "Basic Formatting": "Grundlæggende formatering",
+    "Increase quote level": "Øge tilbudsniveau",
+    "Decrease quote level": "Sænk citeringsniveauet",
+    "Image / Video": "Billede / video",
+    "Resize larger": "Ændre størrelse større",
+    "Resize smaller": "Ændre størrelsen mindre",
+    "Table": "Tabel",
+    "Select table cell": "Vælg tabel celle",
+    "Extend selection one cell": "Udvide valget en celle",
+    "Extend selection one row": "Udvide markeringen en række",
+    "Navigation": "Navigation",
+    "Focus popup / toolbar": "Fokus popup / værktøjslinje",
+    "Return focus to previous position": "Returnere fokus til tidligere position",
+
+    // Embed.ly
+    "Embed URL": "Integrere url",
+    "Paste in a URL to embed": "Indsæt i en URL for at indlejre",
+
+    // Word Paste.
+    "The pasted content is coming from a Microsoft Word document. Do you want to keep the format or clean it up?": "Det indsatte indhold kommer fra et Microsoft Word-dokument. vil du holde formatet eller rydde det op?",
+    "Keep": "Holde",
+    "Clean": "Ren",
+    "Word Paste Detected": "Ordpasta opdages"
   },
   direction: "ltr"
 };

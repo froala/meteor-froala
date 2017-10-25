@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2017 Froala Labs
  */
@@ -64,6 +64,7 @@ $.FE.LANGUAGE['nb'] = {
     "Colors": "Farger",
     "Background": "Bakgrunn",
     "Text": "Tekst",
+    "HEX Color": "Heksefarge",
 
     // Paragraphs
     "Paragraph Format": "Stiler",
@@ -125,6 +126,8 @@ $.FE.LANGUAGE['nb'] = {
     "Width": "Bredde",
     "Height": "H\u00f8yde",
     "Something went wrong. Please try again.": "Noe gikk galt. V\u00e6r s\u00e5 snill, pr\u00f8v p\u00e5 nytt.",
+    "Image Caption": "Bilde bildetekst",
+    "Advanced Edit": "Avansert redigering",
 
     // Video
     "Insert Video": "Sett inn video",
@@ -253,7 +256,57 @@ $.FE.LANGUAGE['nb'] = {
     "Decrease": "Nedgang",
 
     // Quick Insert
-    "Quick Insert": "Hurtiginnsats"
+    "Quick Insert": "Hurtiginnsats",
+
+    // Spcial Characters
+    "Special Characters": "Spesielle karakterer",
+    "Latin": "Latin",
+    "Greek": "Gresk",
+    "Cyrillic": "Kyrilliske",
+    "Punctuation": "Tegnsetting",
+    "Currency": "Valuta",
+    "Arrows": "Piler",
+    "Math": "Matte",
+    "Misc": "Misc",
+
+    // Print.
+    "Print": "Skrive ut",
+
+    // Spell Checker.
+    "Spell Checker": "Stavekontroll",
+
+    // Help
+    "Help": "Hjelp",
+    "Shortcuts": "Snarveier",
+    "Inline Editor": "Inline editor",
+    "Show the editor": "Vis redaktøren",
+    "Common actions": "Felles handlinger",
+    "Copy": "Kopiere",
+    "Cut": "Kutte opp",
+    "Paste": "Lim inn",
+    "Basic Formatting": "Grunnleggende formatering",
+    "Increase quote level": "Øke tilbudsnivået",
+    "Decrease quote level": "Redusere tilbudsnivå",
+    "Image / Video": "Bilde / video",
+    "Resize larger": "Endre størrelsen større",
+    "Resize smaller": "Endre størrelsen mindre",
+    "Table": "Bord",
+    "Select table cell": "Velg tabellcelle",
+    "Extend selection one cell": "Utvide valg en celle",
+    "Extend selection one row": "Utvide valg en rad",
+    "Navigation": "Navigasjon",
+    "Focus popup / toolbar": "Fokus popup / verktøylinje",
+    "Return focus to previous position": "Returnere fokus til tidligere posisjon",
+
+    // Embed.ly
+    "Embed URL": "Legge inn nettadressen",
+    "Paste in a URL to embed": "Lim inn i en URL for å legge inn",
+
+    // Word Paste.
+    "The pasted content is coming from a Microsoft Word document. Do you want to keep the format or clean it up?": "Det limte innholdet kommer fra et Microsoft Word-dokument. vil du beholde formatet eller rydde det opp?",
+    "Keep": "Beholde",
+    "Clean": "Ren",
+    "Word Paste Detected": "Ordpasta oppdages"
   },
   direction: "ltr"
 };

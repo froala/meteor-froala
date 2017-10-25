@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2017 Froala Labs
  */
@@ -64,6 +64,7 @@ $.FE.LANGUAGE['sv'] = {
     "Colors": "F\u00e4rger",
     "Background": "Bakgrund",
     "Text": "Text",
+    "HEX Color": "Hex färg",
 
     // Paragraphs
     "Paragraph Format": "Format",
@@ -125,6 +126,8 @@ $.FE.LANGUAGE['sv'] = {
     "Width": "Bredd",
     "Height": "H\u00f6jd",
     "Something went wrong. Please try again.": "N\u00e5got gick snett. Var god f\u00f6rs\u00f6k igen.",
+    "Image Caption": "Bildtextning",
+    "Advanced Edit": "Avancerad redigering",
 
     // Video
     "Insert Video": "Infoga video",
@@ -253,7 +256,57 @@ $.FE.LANGUAGE['sv'] = {
     "Decrease": "Minska",
 
     // Quick Insert
-    "Quick Insert": "Snabb insats"
+    "Quick Insert": "Snabb insats",
+
+    // Spcial Characters
+    "Special Characters": "Speciella karaktärer",
+    "Latin": "Latin",
+    "Greek": "Grekisk",
+    "Cyrillic": "Cyrillic",
+    "Punctuation": "Skiljetecken",
+    "Currency": "Valuta",
+    "Arrows": "Pilar",
+    "Math": "Matematik",
+    "Misc": "Misc",
+
+    // Print.
+    "Print": "Skriva ut",
+
+    // Spell Checker.
+    "Spell Checker": "Stavningskontroll",
+
+    // Help
+    "Help": "Hjälpa",
+    "Shortcuts": "Genvägar",
+    "Inline Editor": "Inline editor",
+    "Show the editor": "Visa redigeraren",
+    "Common actions": "Gemensamma åtgärder",
+    "Copy": "Kopiera",
+    "Cut": "Skära",
+    "Paste": "Klistra",
+    "Basic Formatting": "Grundläggande formatering",
+    "Increase quote level": "Öka citatnivå",
+    "Decrease quote level": "Sänk citatnivå",
+    "Image / Video": "Bild / video",
+    "Resize larger": "Ändra storlek större",
+    "Resize smaller": "Ändra storlek mindre",
+    "Table": "Tabell",
+    "Select table cell": "Välj tabellcell",
+    "Extend selection one cell": "Utvidga valet en cell",
+    "Extend selection one row": "Förlänga valet en rad",
+    "Navigation": "Navigering",
+    "Focus popup / toolbar": "Fokus popup / verktygsfältet",
+    "Return focus to previous position": "Returnera fokus till tidigare position",
+
+    // Embed.ly
+    "Embed URL": "Bädda in url",
+    "Paste in a URL to embed": "Klistra in i en url för att bädda in",
+
+    // Word Paste.
+    "The pasted content is coming from a Microsoft Word document. Do you want to keep the format or clean it up?": "Det klistrade innehållet kommer från ett Microsoft Word-dokument. vill du hålla formatet eller städa upp det?",
+    "Keep": "Ha kvar",
+    "Clean": "Rena",
+    "Word Paste Detected": "Ordpasta upptäcks"
   },
   direction: "ltr"
 };

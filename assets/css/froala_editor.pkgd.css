@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2017 Froala Labs
  */
@@ -68,6 +68,12 @@
 }
 .fr-element [contenteditable="true"] {
   outline: 0px solid transparent;
+  user-select: text;
+  -o-user-select: text;
+  -moz-user-select: text;
+  -khtml-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
 }
 .fr-box a.fr-floating-btn {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px 1px rgba(0, 0, 0, 0.16);
@@ -163,11 +169,11 @@ iframe.fr-iframe {
 .fr-wrapper.show-placeholder .fr-placeholder {
   display: block;
 }
-.fr-wrapper ::selection {
+.fr-wrapper ::-moz-selection {
   background: #b5d6fd;
   color: #000000;
 }
-.fr-wrapper ::-moz-selection {
+.fr-wrapper ::selection {
   background: #b5d6fd;
   color: #000000;
 }
@@ -576,7 +582,7 @@ body.prevent-scroll.fr-mobile {
   bottom: 0;
   right: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 2147483640;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -727,7 +733,7 @@ body.prevent-scroll.fr-mobile {
   -moz-opacity: 0.5;
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  z-index: 9998;
+  z-index: 2147483639;
 }
 .fr-popup {
   position: absolute;
@@ -754,7 +760,7 @@ body.prevent-scroll.fr-mobile {
   -webkit-user-select: none;
   -ms-user-select: none;
   margin-top: 10px;
-  z-index: 9995;
+  z-index: 2147483635;
   text-align: left;
   border: 0px;
   border-top: 5px solid #222222;
@@ -1584,7 +1590,7 @@ textarea.fr-code {
   opacity: 0.2;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   position: absolute;
-  z-index: 9999;
+  z-index: 2147483640;
   display: none;
 }
 .fr-drag-helper.fr-visible {
@@ -1679,7 +1685,7 @@ textarea.fr-code {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 2147483640;
   overflow: hidden;
   margin: 0 !important;
   padding: 0 !important;
@@ -1788,7 +1794,7 @@ body.fr-fullscreen {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 9990 !important;
+  z-index: 2147483630 !important;
   width: auto !important;
 }
 .fr-box.fr-fullscreen .fr-toolbar.fr-top {
@@ -1951,7 +1957,7 @@ body.fr-fullscreen {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 2147483640;
   display: none;
 }
 .fr-image-upload-layer {
@@ -1980,7 +1986,7 @@ body.fr-fullscreen {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 2147483640;
   overflow: hidden;
   margin: 0 !important;
   padding: 0 !important;
@@ -2394,7 +2400,7 @@ div.fr-modal-body div.fr-image-list div.fr-image-container .fr-insert-img {
 }
 .fr-quick-insert {
   position: absolute;
-  z-index: 9998;
+  z-index: 2147483639;
   white-space: nowrap;
   padding-right: 5px;
   margin-left: -5px;
@@ -2556,6 +2562,36 @@ div.fr-modal-body div.fr-image-list div.fr-image-container .fr-insert-img {
   -khtml-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+.fr-popup .fr-table-colors-hex-layer {
+  width: 100%;
+  margin: 0px;
+  padding: 10px;
+}
+.fr-popup .fr-table-colors-hex-layer .fr-input-line {
+  float: left;
+  width: calc(100% - 50px);
+  padding: 8px 0 0;
+}
+.fr-popup .fr-table-colors-hex-layer .fr-action-buttons {
+  float: right;
+  width: 50px;
+}
+.fr-popup .fr-table-colors-hex-layer .fr-action-buttons button {
+  background-color: #1e88e5;
+  color: #FFF;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  font-size: 13px;
+  height: 32px;
+}
+.fr-popup .fr-table-colors-hex-layer .fr-action-buttons button:hover {
+  background-color: #166dba;
+  color: #FFF;
 }
 .fr-popup .fr-table-size .fr-table-size-info {
   text-align: center;
@@ -2791,7 +2827,7 @@ div.fr-modal-body div.fr-image-list div.fr-image-container .fr-insert-img {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 2147483640;
   overflow: hidden;
   margin: 0 !important;
   padding: 0 !important;
@@ -2855,6 +2891,6 @@ div.fr-modal-body div.fr-image-list div.fr-image-container .fr-insert-img {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 2147483640;
   display: none;
 }

@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2017 Froala Labs
  */
@@ -64,6 +64,7 @@ $.FE.LANGUAGE['en_gb'] = {
     "Colors": "Colours",
     "Background": "Background",
     "Text": "Text",
+    "HEX Color": "HEX Colour",
 
     // Paragraphs
     "Paragraph Format": "Paragraph Format",
@@ -125,6 +126,8 @@ $.FE.LANGUAGE['en_gb'] = {
     "Width": "Width",
     "Height": "Height",
     "Something went wrong. Please try again.": "Something went wrong. Please try again.",
+    "Image Caption": "Image Caption",
+    "Advanced Edit": "Advanced Edit",
 
     // Video
     "Insert Video": "Insert Video",
@@ -197,7 +200,57 @@ $.FE.LANGUAGE['en_gb'] = {
     "Decrease": "Decrease",
 
     // Quick Insert
-    "Quick Insert": "Quick Insert"
+    "Quick Insert": "Quick Insert",
+
+    // Spcial Characters
+    "Special Characters": "Special Characters",
+    "Latin": "Latin",
+    "Greek": "Greek",
+    "Cyrillic": "Cyrillic",
+    "Punctuation": "Punctuation",
+    "Currency": "Currency",
+    "Arrows": "Arrows",
+    "Math": "Math",
+    "Misc": "Misc",
+
+    // Print.
+    "Print": "Print",
+
+    // Spell Checker.
+    "Spell Checker": "Spell Checker",
+
+    // Help
+    "Help": "Help",
+    "Shortcuts": "Shortcuts",
+    "Inline Editor": "Inline Editor",
+    "Show the editor": "Show the editor",
+    "Common actions": "Common actions",
+    "Copy": "Copy",
+    "Cut": "Cut",
+    "Paste": "Paste",
+    "Basic Formatting": "Basic Formatting",
+    "Increase quote level": "Increase quote level",
+    "Decrease quote level": "Decrease quote level",
+    "Image / Video": "Image / Video",
+    "Resize larger": "Resize larger",
+    "Resize smaller": "Resize smaller",
+    "Table": "Table",
+    "Select table cell": "Select table cell",
+    "Extend selection one cell": "Extend selection one cell",
+    "Extend selection one row": "Extend selection one row",
+    "Navigation": "Navigation",
+    "Focus popup / toolbar": "Focus popup / toolbar",
+    "Return focus to previous position": "Return focus to previous position",
+
+    // Embed.ly
+    "Embed URL": "Embed URL",
+    "Paste in a URL to embed": "Paste in a URL to embed",
+
+    // Word Paste.
+    "The pasted content is coming from a Microsoft Word document. Do you want to keep the format or clean it up?": "The pasted content is coming from a Microsoft Word document. Do you want to keep the format or clean it up?",
+    "Keep": "Keep",
+    "Clean": "Clean",
+    "Word Paste Detected": "Word Paste Detected"
   },
   direction: "ltr"
 };

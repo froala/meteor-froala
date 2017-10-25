@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2017 Froala Labs
  */
@@ -70,11 +70,11 @@
   left: 0;
   right: 0;
 }
-.red-theme .fr-wrapper ::selection {
+.red-theme .fr-wrapper ::-moz-selection {
   background: #b5d6fd;
   color: #000000;
 }
-.red-theme .fr-wrapper ::-moz-selection {
+.red-theme .fr-wrapper ::selection {
   background: #b5d6fd;
   color: #000000;
 }
@@ -223,6 +223,7 @@
 }
 .red-theme .fr-drag-helper {
   background: #ffca28;
+  z-index: 2147483640;
 }
 .red-theme.fr-popup .fr-link:focus {
   outline: 0;
@@ -244,6 +245,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 2147483640;
 }
 .red-theme .fr-file-progress-bar-layer > h3 {
   margin: 10px 0;
@@ -330,6 +332,7 @@
   left: 0;
   bottom: 0;
   right: 0;
+  z-index: 2147483640;
 }
 .red-theme .fr-image-upload-layer {
   border: dashed 2px #edc9c9;
@@ -347,6 +350,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 2147483640;
 }
 .red-theme .fr-image-progress-bar-layer > h3 {
   margin: 10px 0;
@@ -499,6 +503,15 @@
 .red-theme .fr-table-resizer div {
   border-right: 1px solid #ffca28;
 }
+.red-theme.fr-popup .fr-table-colors-hex-layer .fr-input-line {
+  padding: 8px 0 0;
+}
+.red-theme.fr-popup .fr-table-colors-hex-layer .fr-action-buttons button {
+  background-color: #ffca28;
+}
+.red-theme.fr-popup .fr-table-colors-hex-layer .fr-action-buttons button:hover {
+  background-color: #f4b800;
+}
 .red-theme.fr-popup .fr-table-size .fr-select-table-size {
   line-height: 0;
 }
@@ -593,6 +606,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 2147483640;
 }
 .red-theme .fr-video-progress-bar-layer > h3 {
   margin: 10px 0;
@@ -615,6 +629,7 @@
   left: 0;
   bottom: 0;
   right: 0;
+  z-index: 2147483640;
 }
 .red-theme .fr-view span[style~="color:"] a {
   color: inherit;
@@ -932,6 +947,7 @@
   left: 0;
   bottom: 0;
   right: 0;
+  z-index: 2147483640;
 }
 .red-theme.fr-modal.fr-middle .fr-modal-wrapper {
   margin-top: 0;
