@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.1 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.2 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2017 Froala Labs
  */
@@ -132,6 +132,10 @@ $.FE.LANGUAGE['da'] = {
     // Video
     "Insert Video": "Inds\u00e6t video",
     "Embedded Code": "Embedded kode",
+    "Paste in a video URL": "Indsæt i en video url",
+    "Drop video": "Slip video",
+    "Your browser does not support HTML5 video.": "Din browser understøtter ikke html5 video.",
+    "Upload Video": "Upload video",
 
     // Tables
     "Insert Table": "Inds\u00e6t tabel",

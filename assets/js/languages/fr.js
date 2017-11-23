@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.1 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.2 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2017 Froala Labs
  */
@@ -132,6 +132,10 @@ $.FE.LANGUAGE['fr'] = {
     // Video
     "Insert Video": "Ins\u00e9rer une vid\u00e9o",
     "Embedded Code": "Code embarqu\u00e9",
+    "Paste in a video URL": "Coller dans une URL vidéo",
+    "Drop video": "D\u00e9posez la vidéo",
+    "Your browser does not support HTML5 video.": "Votre navigateur ne supporte pas la vidéo html5.",
+    "Upload Video": "Télécharger une video",
 
     // Tables
     "Insert Table": "Ins\u00e9rer un tableau",

@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.1 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.2 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2017 Froala Labs
  */
@@ -132,6 +132,10 @@ $.FE.LANGUAGE['bs'] = {
     // Video
     "Insert Video": "Umetni video",
     "Embedded Code": "Embedded kod",
+    "Paste in a video URL": "Nalepite u video url",
+    "Drop video": "Drop video",
+    "Your browser does not support HTML5 video.": "Vaš pretraživač ne podržava html5 video.",
+    "Upload Video": "Otpremite video",
 
     // Tables
     "Insert Table": "Umetni tabelu",
