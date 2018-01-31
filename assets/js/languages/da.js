@@ -1,7 +1,7 @@
 /*!
- * froala_editor v2.7.3 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.4 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2017 Froala Labs
+ * Copyright 2014-2018 Froala Labs
  */
 
 (function (factory) {
@@ -307,10 +307,10 @@ $.FE.LANGUAGE['da'] = {
     "Paste in a URL to embed": "Indsæt i en URL for at indlejre",
 
     // Word Paste.
-    "The pasted content is coming from a Microsoft Word document. Do you want to keep the format or clean it up?": "Det indsatte indhold kommer fra et Microsoft Word-dokument. vil du holde formatet eller rydde det op?",
-    "Keep": "Holde",
-    "Clean": "Ren",
-    "Word Paste Detected": "Ordpasta opdages"
+    "The pasted content is coming from a Microsoft Word document. Do you want to keep the format or clean it up?": "Det indsatte indhold kommer fra et Microsoft Word-dokument. Vil du beholde formateringen eller fjerne det?",
+    "Keep": "Beholde",
+    "Clean": "Fjerne",
+    "Word Paste Detected": "Indsættelse fra Word er detekteret"
   },
   direction: "ltr"
 };

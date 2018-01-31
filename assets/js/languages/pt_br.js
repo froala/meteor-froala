@@ -1,7 +1,7 @@
 /*!
- * froala_editor v2.7.3 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.4 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2017 Froala Labs
+ * Copyright 2014-2018 Froala Labs
  */
 
 (function (factory) {
@@ -50,7 +50,7 @@ $.FE.LANGUAGE['pt_br'] = {
     "Delete": "Apagar",
     "Cancel": "Cancelar",
     "OK": "Ok",
-    "Back": "Costas",
+    "Back": "Voltar",
     "Remove": "Remover",
     "More": "Mais",
     "Update": "Atualizar",
