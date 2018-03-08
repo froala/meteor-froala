@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.7.5 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.7.6 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2018 Froala Labs
  */
@@ -307,10 +307,10 @@ $.FE.LANGUAGE['pl'] = {
     "Paste in a URL to embed": "Wklej w adresie URL do osadzenia",
 
     // Word Paste.
-    "The pasted content is coming from a Microsoft Word document. Do you want to keep the format or clean it up?": "Wklejana treść pochodzi z dokumentu programu microsoft. czy chcesz zachować format lub oczyścić go?",
-    "Keep": "Trzymać",
-    "Clean": "Czysty",
-    "Word Paste Detected": "Wykryto wklejkę słów"
+    "The pasted content is coming from a Microsoft Word document. Do you want to keep the format or clean it up?": "Wklejana treść pochodzi z programu Microsoft Word. Czy chcesz zachować formatowanie czy wkleić jako zwykły tekst?",
+    "Keep": "Zachowaj formatowanie",
+    "Clean": "Wklej jako tekst",
+    "Word Paste Detected": "Wykryto sformatowany tekst"
   },
   direction: "ltr"
 };
