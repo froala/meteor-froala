@@ -1,20 +1,21 @@
 /*!
- * froala_editor v2.8.2 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.8.3 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2018 Froala Labs
  */
 
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('FroalaEditor')) :
-  typeof define === 'function' && define.amd ? define(['FroalaEditor'], factory) :
-  (factory(global.$.FroalaEditor));
-}(this, (function (FE) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('jquery')) :
+  typeof define === 'function' && define.amd ? define(['jquery'], factory) :
+  (factory(global.jQuery));
+}(this, (function ($) { 'use strict';
 
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
 
   /**
    * Hungarian
    */
+  var FE = $.FE;
 
   FE.LANGUAGE['hu'] = {
     translation: {
