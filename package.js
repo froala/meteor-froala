@@ -1,7 +1,7 @@
 Package.describe({
   name: "froala:editor",
   summary: "A beautiful jQuery WYSIWYG HTML rich text editor.",
-  version: "2.8.5",
+  version: "2.9.0",
   git: "https://github.com/froala/meteor-froala/"
 });
 
@@ -36,6 +36,7 @@ Package.onUse(function(api) {
     // 3rd Party
     "assets/css/third_party/embedly.min.css",
     "assets/css/third_party/spell_checker.min.css",
+    "assets/css/third_party/image_tui.min.css",
 
     // JS
     "assets/js/froala_editor.min.js",
@@ -56,8 +57,10 @@ Package.onUse(function(api) {
     "assets/js/plugins/help.min.js",
     "assets/js/plugins/image.min.js",
     "assets/js/plugins/image_manager.min.js",
+    "assets/js/plugins/inline_class.min.js",
     "assets/js/plugins/inline_style.min.js",
     "assets/js/plugins/line_breaker.min.js",
+    "assets/js/plugins/line_height.min.js",
     "assets/js/plugins/link.min.js",
     "assets/js/plugins/lists.min.js",
     "assets/js/plugins/paragraph_format.min.js",
@@ -74,7 +77,9 @@ Package.onUse(function(api) {
 
     // 3rd Party
     "assets/js/third_party/embedly.min.js",
+    "assets/js/third_party/font_awesome.min.js",
     "assets/js/third_party/image_aviary.min.js",
+    "assets/js/third_party/image_tui.min.js",
     "assets/js/third_party/spell_checker.min.js"
   ], ["client"]);
 });

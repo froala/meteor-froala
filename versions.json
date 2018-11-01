@@ -2,7 +2,7 @@
   "dependencies": [
     [
       "fortawesome:fontawesome",
-      "4.4.0"
+      "4.7.0"
     ],
     [
       "jquery",
