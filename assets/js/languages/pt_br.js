@@ -1,7 +1,7 @@
 /*!
- * froala_editor v2.9.1 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.2 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2018 Froala Labs
+ * Copyright 2014-2019 Froala Labs
  */
 
 (function (factory) {
@@ -311,9 +311,9 @@ $.FE.LANGUAGE['pt_br'] = {
 
     // Word Paste.
     "The pasted content is coming from a Microsoft Word document. Do you want to keep the format or clean it up?": "O conteúdo colado vem de um documento Microsoft Word. Você quer manter o formato ou limpá-lo?",
-    "Keep": "Manter",
-    "Clean": "Limpar",
-    "Word Paste Detected": "Colar do Word detectado"
+    "Keep": "Manter formatação",
+    "Clean": "Limpar formatação",
+    "Word Paste Detected": "Texto do Word detectado"
   },
   direction: "ltr"
 };
