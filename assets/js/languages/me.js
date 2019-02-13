@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.9.2 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.3 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2019 Froala Labs
  */
@@ -89,7 +89,22 @@ $.FE.LANGUAGE['me'] = {
 
     // Lists
     "Ordered List": "Ure\u0111ena lista",
+    "Default": "",
+    "Lower Alpha": "",
+    "Lower Greek": "",
+    "Lower Roman": "",
+    "Upper Alpha": "",
+    "Upper Roman": "",
+
     "Unordered List": "Nesre\u0111ene lista",
+    "Circle": "",
+    "Disc": "",
+    "Square": "",
+
+    // Line height
+    "Line Height": "",
+    "Single": "",
+    "Double": "",
 
     // Indent
     "Decrease Indent": "Smanjenje alineja",

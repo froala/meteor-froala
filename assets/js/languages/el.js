@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.9.2 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.3 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2019 Froala Labs
  */
@@ -77,9 +77,9 @@ $.FE.LANGUAGE['el'] = {
 
     // Style
     "Paragraph Style": "Εξατομίκευση παραγράφου",
-	"Gray": "Γκρι",
-	"Spaced": "Αραιά",
-	"Uppercase": "Κεφαλαία",
+  	"Gray": "Γκρι",
+  	"Spaced": "Αραιά",
+  	"Uppercase": "Κεφαλαία",
     "Inline Style": "Ενσωματωμένος τύπος",
 
     // Alignment
@@ -92,7 +92,22 @@ $.FE.LANGUAGE['el'] = {
 
     // Lists
     "Ordered List": "Διεταγμένη λίστα",
+    "Default": "Προκαθορισμένο",
+    "Lower Alpha": "Χαμηλότερο άλφα",
+    "Lower Greek": "Κάτω ελληνικά",
+    "Lower Roman": "Χαμηλότερο ρωμαϊκό",
+    "Upper Alpha": "Ανώτερο άλφα",
+    "Upper Roman": "Ανώτερο ρωμαϊκό",
+
     "Unordered List": "Αναδιάταχτη λίστα",
+    "Circle": "Κύκλος",
+    "Disc": "Δίσκος",
+    "Square": "Τετράγωνο",
+
+    // Line height
+    "Line Height": "Ύψος γραμμής",
+    "Single": "Μονόκλινο",
+    "Double": "Διπλό",
 
     // Indent
     "Decrease Indent": "Μείωση πλαισίου",
@@ -251,7 +266,7 @@ $.FE.LANGUAGE['el'] = {
     "Clear Formatting": "Εκαθάριση μορφοποίησης",
 
     // Save
-    "Save": "",
+    "Save": "Αποθηκεύσετε",
 
     // Undo, redo
     "Undo": "Αναίρεση",

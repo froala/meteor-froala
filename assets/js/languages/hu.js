@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.9.2 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.3 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2019 Froala Labs
  */
@@ -89,7 +89,22 @@ $.FE.LANGUAGE['hu'] = {
 
     // Lists
     "Ordered List": "Sz\u00e1moz\u00e1s",
+    "Default": "Alapértelmezett",
+    "Lower Alpha": "Alacsonyabb alfa",
+    "Lower Greek": "Alsó görög",
+    "Lower Roman": "Alacsonyabb római",
+    "Upper Alpha": "Felső alfa",
+    "Upper Roman": "Felső római",
+
     "Unordered List": "Felsorol\u00e1s",
+    "Circle": "Kör",
+    "Disc": "Lemez",
+    "Square": "Négyzet",
+
+    // Line height
+    "Line Height": "Vonal magassága",
+    "Single": "Egyetlen",
+    "Double": "Kettős",
 
     // Indent
     "Decrease Indent": "Beh\u00faz\u00e1s cs\u00f6kkent\u00e9se",
