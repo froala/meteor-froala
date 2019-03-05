@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.9.2 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.3 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2019 Froala Labs
  */
@@ -89,7 +89,22 @@ $.FE.LANGUAGE['pl'] = {
 
     // Lists
     "Ordered List": "Uporz\u0105dkowana lista",
+    "Default": "Domyślna",
+    "Lower Alpha": "Niższy alfa",
+    "Lower Greek": "Niższy grecki",
+    "Lower Roman": "Niższe rzymskie",
+    "Upper Alpha": "Górna alfa",
+    "Upper Roman": "Górny rzymski",
+
     "Unordered List": "Lista nieuporz\u0105dkowana",
+    "Circle": "Okrąg",
+    "Disc": "Dysk",
+    "Square": "Plac",
+
+    // Line height
+    "Line Height": "Wysokość linii",
+    "Single": "Pojedynczy",
+    "Double": "Podwójnie",
 
     // Indent
     "Decrease Indent": "Zmniejsz wci\u0119cie",

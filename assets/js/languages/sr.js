@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.9.2 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.3 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2019 Froala Labs
  */
@@ -89,7 +89,22 @@ $.FE.LANGUAGE['sr'] = {
 
     // Lists
     "Ordered List": "Ure\u0111enih lista",
+    "Default": "Уобичајено",
+    "Lower Alpha": "Нижи алфа",
+    "Lower Greek": "Лов греек",
+    "Lower Roman": "Ловер роман",
+    "Upper Alpha": "Уппер алпха",
+    "Upper Roman": "Уппер роман",
+
     "Unordered List": "Neure\u0111enu lista",
+    "Circle": "Круг",
+    "Disc": "Диск",
+    "Square": "Квадрат",
+
+    // Line height
+    "Line Height": "Висина линија",
+    "Single": "Једно",
+    "Double": "Доубле",
 
     // Indent
     "Decrease Indent": "Smanjivanje uvla\u010denja",
