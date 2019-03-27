@@ -23,7 +23,7 @@ meteor add froala:editor
 
 4.Run froala when template is rendered in main.js file.
 Template.froala.rendered = function () {
-  $('.editor').froalaEditor()
+  new FroalaEditor('.editor');
 };
 
 
