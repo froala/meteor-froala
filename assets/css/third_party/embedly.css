@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.9.3 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.4 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2019 Froala Labs
  */
@@ -50,6 +50,7 @@
 }
 .fr-box .fr-embedly-resizer {
   position: absolute;
+  z-index: 2;
   border: solid 1px #1e88e5;
   display: none;
   user-select: none;
