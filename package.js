@@ -7,7 +7,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.use([
-   
+    "fortawesome:fontawesome@4.7.0"
   ], "client");
 
   api.addFiles([
