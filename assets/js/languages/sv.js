@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.9.4 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.5 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2019 Froala Labs
  */
@@ -163,7 +163,7 @@ $.FE.LANGUAGE['sv'] = {
     "Insert row below": "Infoga rad efter",
     "Delete row": "Ta bort rad",
     "Column": "Kolumn",
-    "Insert column before": "Infoga kollumn f\u00f6re",
+    "Insert column before": "Infoga kolumn f\u00f6re",
     "Insert column after": "Infoga kolumn efter",
     "Delete column": "Ta bort kolumn",
     "Cell": "Cell",
