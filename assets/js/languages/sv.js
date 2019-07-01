@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.9.5 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.6 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2019 Froala Labs
  */
@@ -131,7 +131,7 @@ $.FE.LANGUAGE['sv'] = {
     "Tags": "Etiketter",
     "Are you sure? Image will be deleted.": "\u00c4r du s\u00e4ker? Bild kommer att raderas.",
     "Replace": "Ers\u00e4tt",
-    "Uploading": "Laddar up",
+    "Uploading": "Laddar upp",
     "Loading image": "Laddar bild",
     "Display": "Visa",
     "Inline": "I linje",

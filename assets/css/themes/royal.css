@@ -1,5 +1,5 @@
 /*!
- * froala_editor v2.9.5 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v2.9.6 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
  * Copyright 2014-2019 Froala Labs
  */
@@ -1067,6 +1067,9 @@
 .royal-theme.fr-modal .fr-modal-wrapper .fr-modal-head h4 {
   margin: 0;
   font-weight: 400;
+}
+.royal-theme.fr-modal .fr-modal-wrapper div.fr-modal-body {
+  overflow-y: auto;
 }
 .royal-theme.fr-modal .fr-modal-wrapper div.fr-modal-body:focus {
   outline: 0;
