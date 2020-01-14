@@ -1,7 +1,7 @@
 /*!
- * froala_editor v3.0.6 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2019 Froala Labs
+ * Copyright 2014-2020 Froala Labs
  */
 
 .clearfix::after {
@@ -725,6 +725,16 @@ body.prevent-scroll {
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   z-index: 2147483639; }
+
+ol.decimal_type {
+  counter-reset: item; }
+
+ol.decimal_type > li {
+  display: block; }
+
+ol.decimal_type > li:before {
+  content: counters(item,".") ". ";
+  counter-increment: item; }
 
 .fr-popup {
   position: absolute;
@@ -2818,6 +2828,7 @@ img.fr-bordered {
     -khtml-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    break-after: always;
     page-break-after: always; }
   .fr-view .fr-file {
     position: relative; }
@@ -2990,7 +3001,6 @@ img.fr-bordered {
     text-align: center; }
     .fr-view .fr-img-caption .fr-img-wrap {
       padding: 0;
-      display: inline-block;
       margin: auto;
       text-align: center;
       width: 100%; }
