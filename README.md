@@ -26,9 +26,12 @@ meteor add froala:editor
 4.Run froala when template is rendered in main.js file.
 ```
 Template.froala.rendered = function () {
-  $('.editor').froalaEditor()
+  $('.editor').froalaEditor({
+    toolbarInline: true
+  })
 };
 ```
+Check out the [Froala editor documentation](https://froala.com/wysiwyg-editor/v2.0/docs/) for more details to add `options, events and methods`.
 
 
 
