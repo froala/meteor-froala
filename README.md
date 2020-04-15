@@ -31,6 +31,7 @@ Template.froala.rendered = function () {
   })
 };
 ```
+Check out the [Froala editor documentation](https://froala.com/wysiwyg-editor/v2.0/docs/) for more details to add `options, events and methods`.
 
 
 
