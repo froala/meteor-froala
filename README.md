@@ -9,7 +9,7 @@ Check out the [Froala editor homepage](https://froala.com/wysiwyg-editor) for mo
 1.Open terminal in your meteor project directory and execute following command:
 
 ```bash
-meteor add froala:editor@2.9.6
+meteor add froala:editor
 ```
 2.Create a froala-template in your main.html file.
 ```
