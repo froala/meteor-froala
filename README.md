@@ -12,19 +12,26 @@ Check out the [Froala editor homepage](https://froala.com/wysiwyg-editor) for mo
 meteor add froala:editor
 ```
 2.Create a froala-template in your main.html file.
+```
 <template name="froala">
   <div class="editor">Hello Froala</div>
 </template>
-
+```
 3.Include the template in body of html.
+```
 <body>
  {{> froala}}
 </body>
-
+```
 4.Run froala when template is rendered in main.js file.
+```
 Template.froala.rendered = function () {
-  $('.editor').froalaEditor()
+  $('.editor').froalaEditor({
+    toolbarInline: true
+  })
 };
+```
+Check out the [Froala editor documentation](https://froala.com/wysiwyg-editor/v2.0/docs/) for more details to add `options, events and methods`.
 
 
 
