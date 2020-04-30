@@ -1,7 +1,7 @@
 Package.describe({
   name: "froala:editor",
   summary: "A beautiful jQuery WYSIWYG HTML rich text editor.",
-  version: "2.9.7",
+  version: "2.9.8",
   git: "https://github.com/froala/meteor-froala/"
 });
 
