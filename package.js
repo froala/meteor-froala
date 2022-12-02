@@ -43,9 +43,6 @@ Package.onUse(function(api) {
 
     // JS Plugins
     "assets/js/plugins/align.min.js",
-    "assets/js/plugins/char_counter.min.js",
-    "assets/js/plugins/code_beautifier.min.js",
-    "assets/js/plugins/code_view.min.js",
     "assets/js/plugins/colors.min.js",
     "assets/js/plugins/draggable.min.js",
     "assets/js/plugins/emoticons.min.js",
