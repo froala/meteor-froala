@@ -71,6 +71,7 @@ Package.onUse(function(api) {
     "assets/js/plugins/url.min.js",
     "assets/js/plugins/video.min.js",
     "assets/js/plugins/word_paste.min.js",
+    "assets/js/plugins/track_changes.min.js",
 
     // 3rd Party
     "assets/js/third_party/embedly.min.js",
