@@ -1,0 +1,95 @@
+name: Sync Version – meteor
+
+on:
+  repository_dispatch:
+    types: [version_update]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+          fetch-depth: 0
+
+
+      - name: Load & validate version
+        run: |
+          VERSION="${{ github.event.client_payload.version }}"
+          VERSION="${VERSION//,/\.}"
+
+          if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]; then
+            echo "Invalid version: $VERSION"
+            exit 1
+          fi
+
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+
+      - name: Prepare release branch
+        run: |
+          BRANCH="release-v${VERSION}"
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+
+          git fetch origin
+
+          if git ls-remote --heads origin "$BRANCH" | grep -q "$BRANCH"; then
+            git checkout "$BRANCH"
+            git pull origin "$BRANCH"
+          else
+            git checkout -b "$BRANCH"
+          fi
+
+
+      - name: Update package.js
+        run: |
+         sed -i -E "s/version:\s*['\"][^'\"]+['\"]/version: '${VERSION}'/" package.js
+
+
+      - name: Sync assets
+        env:
+          GIT_TOKEN: ${{ secrets.PAT }}
+        run: |
+          git clone --depth 1 \
+            "https://x-access-token:${GIT_TOKEN}@github.com/froala/wysiwyg-editor.git" \
+            /tmp/wysiwyg-main
+
+          mkdir -p app/assets/javascripts
+          mkdir -p app/assets/stylesheets
+          
+          
+          rsync -av --delete /tmp/wysiwyg-main/js/ assets/javascripts/
+          rsync -av --delete /tmp/wysiwyg-main/css/ assets/stylesheets/
+
+
+      - name: Commit & push
+        run: |
+          git config user.name "froala-travis-bot"
+          git config user.email "froala_git_travis_bot@idera.com"
+
+          git add app/assets/javascripts app/assets/stylesheets package.js
+
+          git commit -m "chore: release v${VERSION}" || echo "Nothing to commit"
+          git push origin "$BRANCH"
+
+
+      - name: Create Pull Request
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
+          RELEASE_NOTES: ${{ github.event.client_payload.release_notes }}
+        run: |
+          PR_BODY=$(printf "release: yes\n\n## Release Notes (from primary repo)\n\n%s\n" "$RELEASE_NOTES")
+
+          gh pr create \
+            --base master \
+            --head "$BRANCH" \
+            --title "Release v${VERSION}" \
+            --body "$PR_BODY" \
+            || echo "Pull request already exists"
