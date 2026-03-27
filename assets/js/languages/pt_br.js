@@ -1,20 +1,19 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
-
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
   /**
    * Portuguese spoken in Brazil
    */
+
   FE.LANGUAGE['pt_br'] = {
     translation: {
       // Place holder
@@ -24,6 +23,7 @@
       'Italic': 'Itálito',
       'Underline': 'Sublinhar',
       'Strikethrough': 'Tachado',
+      'Size': 'Tamanho',
       // Main buttons
       'Insert': 'Inserir',
       'Delete': 'Apagar',
@@ -34,11 +34,29 @@
       'More': 'Mais',
       'Update': 'Atualizar',
       'Style': 'Estilo',
+      // Basic formatting
+      'Text Color': 'Cor do texto',
+      'Background Color': 'Cor de fundo',
+      'Inline Class': 'Classe Inline',
+      'Default': 'Padrão',
+      'Lower Alpha': 'Alfa minúsculo',
+      'Lower Greek': 'Grego minúsculo',
+      'Lower Roman': 'Roman minúsculo',
+      'Upper Alpha': 'Alfa maiúsculo',
+      'Upper Roman': 'Roman maiúscula',
+      'Circle': 'Círculo',
+      'Disc': 'Disco',
+      'Square': 'Quadrado',
+      'Single': 'Único',
+      'Double': 'Duplo',
+      'Insert Files': 'Inserir arquivos',
+      'Download PDF': 'Baixar PDF',
       // Font
       'Font Family': 'Fonte',
       'Font Size': 'Tamanho',
       // Colors
       'Colors': 'Cores',
+      'Color': 'Cor',
       'Background': 'Fundo',
       'Text': 'Texto',
       'HEX Color': 'Cor hexadecimal',
@@ -53,6 +71,7 @@
       // Style
       'Paragraph Style': 'Estilo de parágrafo',
       'Inline Style': 'Estilo embutido',
+      'Padding': 'Preenchimento',
       // Alignment
       'Align': 'Alinhar',
       'Align Left': 'Alinhar à esquerda',
@@ -60,6 +79,11 @@
       'Align Right': 'Alinhar à direita',
       'Align Justify': 'Justificar',
       'None': 'Nenhum',
+      'Alignment': 'Alinhamento',
+      'Next': 'Próximo',
+      'Previous': 'Anterior',
+      'Advanced Options': 'Opções avançadas',
+      'Close': 'Fechar',
       // Lists
       'Ordered List': 'Lista ordenada',
       'Unordered List': 'Lista não ordenada',
@@ -132,6 +156,30 @@
       'Align Middle': 'Alinhar meio',
       'Align Bottom': 'Alinhar fundo',
       'Cell Style': 'Estilo de célula',
+      'Table Properties': 'Propriedades da tabela',
+      'Cell Properties': 'Propriedades da célula',
+      'Table Footer': 'Rodapé da tabela',
+      'Dimensions': 'Dimensões',
+      'Custom background color input': 'Entrada de cor de fundo personalizada',
+      'Background color picker': 'Seletor de cor de fundo',
+      'Custom border color input': 'Entrada de cor da borda personalizada',
+      'Border color picker': 'Seletor de cor da borda',
+      'Border width': 'Largura da borda',
+      'Border style': 'Estilo da borda',
+      'Border color': 'Cor da borda',
+      'Table width': 'Largura da tabela',
+      'Table height': 'Altura da tabela',
+      'Left align': 'Alinhar à esquerda',
+      'Center align': 'Centralizar',
+      'Right align': 'Alinhar à direita',
+      'solid': 'Linha contínua',
+      'dashed': 'Linha tracejada',
+      'dotted': 'Linha pontilhada',
+      'double': 'Duplo',
+      'groove': 'Linha entalhada',
+      'ridge': 'Linha em relevo',
+      'inset': 'Linha interna',
+      'outset': 'Linha externa',
       // Files
       'Upload File': 'Carregar arquivo',
       'Drop file': 'Arraste seu arquivo aqui',
@@ -206,6 +254,7 @@
       'Clear Formatting': 'Remover formatação',
       // Save
       'Save': "Salve",
+      'Ok': 'OK',
       // Undo, redo
       'Undo': 'Desfazer',
       'Redo': 'Refazer',
@@ -265,14 +314,49 @@
       'Word Paste Detected': 'Texto do Word detectado',
       // Character Counter
       'Characters': 'Caracteres',
+      // Find and Replace
+      'Find and Replace': 'Localizar e substituir',
+      'Find': 'Localizar',
+      'Replace with': 'Substituir por',
+      'Replace All': 'Substituir tudo',
+      'Match case': 'Diferenciar maiúsculas de minúsculas',
+      'Whole words only': 'Apenas palavras inteiras',
       // More Buttons
       'More Text': 'Mais Texto',
       'More Paragraph': 'Mais Parágrafo',
       'More Rich': 'Mais Rico',
-      'More Misc': 'Mais  Misc'
+      'More Misc': 'Mais  Misc',
+      'Border': 'Borda',
+      // selector icon
+      'Select Table': 'Selecionar tabela',
+      'Drag Table': 'Arrastar tabela',
+      'Select PageBreak': 'Selecionar quebra de página',
+      'Drag PageBreak': 'Arrastar quebra de página',
+      'Page Break': 'Quebra de página',
+      //Link to acnhor
+      'Insert Anchor': 'Inserir Âncora',
+      'There are no entries matching': 'Não há entradas correspondentes',
+      'Update Anchor': 'Atualizar Âncora',
+      'Edit Anchor': 'Editar Âncora',
+      'Anchor Name': 'Nome da Âncora',
+      'Anchor Link': 'Link da Âncora',
+      'Scroll to target': 'Rolar para o destino',
+      'Enter the anchor name without space': 'Digite o nome da âncora sem espaços',
+      'Anchor name already exists.': 'O nome da âncora já existe.',
+      // Export to Word
+      'Export to Word': 'Exportar para o Word',
+      'Ensure that all required dependent libraries are available for the plugin to work.': 'Certifique-se de que todas as bibliotecas dependentes necessárias estejam disponíveis para que o plugin funcione.',
+      // Import_from_word
+      'Import from Word': 'Importar do Word',
+      'Please upload a valid file': 'Por favor, carregue um arquivo válido.',
+      'File size must be less than': 'O tamanho do arquivo deve ser menor que',
+      //Code Snippet
+      'Code Snippet': 'Trecho de Código',
+      'Insert Code Snippet': 'Inserir Trecho de Código',
+      'Edit Code Snippet': 'Editar Trecho de Código'
     },
     direction: 'ltr'
   };
 
-})));
+}));
 //# sourceMappingURL=pt_br.js.map

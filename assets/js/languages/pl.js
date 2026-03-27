@@ -1,29 +1,46 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
-
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
   /**
    * Polish
    */
+
   FE.LANGUAGE['pl'] = {
     translation: {
       // Place holder
       'Type something': "Wpisz co\u015B",
+      // Missing translations
+      'Text Color': 'Kolor tekstu',
+      'Background Color': 'Kolor tła',
+      'Inline Class': 'Klasa inline',
+      'Default': 'Domyślna',
+      'Lower Alpha': 'Małe litery alfabetu',
+      'Lower Greek': 'Małe litery greckie',
+      'Lower Roman': 'Małe litery rzymskie',
+      'Upper Alpha': 'Wielkie litery alfabetu',
+      'Upper Roman': 'Wielkie litery rzymskie',
+      'Circle': 'Okrąg',
+      'Disc': 'Dysk',
+      'Square': 'Kwadrat',
+      'Single': 'Pojedynczy',
+      'Double': 'Podwójnie',
+      'Insert Files': 'Wstaw pliki',
+      'Download PDF': 'Pobierz PDF',
       // Basic formatting
       'Bold': 'Pogrubienie',
       'Italic': 'Kursywa',
       'Underline': "Podkre\u015Blenie",
       'Strikethrough': "Przekre\u015Blenie",
+      'Size': 'Rozmiar',
       // Main buttons
       'Insert': 'Wstaw',
       'Delete': "Usun\u0105\u0107",
@@ -39,6 +56,7 @@
       'Font Size': 'Rozmiar czcionki',
       // Colors
       'Colors': 'Kolory',
+      'Color': 'Kolor',
       'Background': "T\u0142o",
       'Text': 'Tekstu',
       'HEX Color': 'Sześciokąt',
@@ -53,6 +71,7 @@
       // Style
       'Paragraph Style': 'Styl akapitu',
       'Inline Style': 'Stylu zgodna',
+      'Padding': 'Wyściółka',
       // Alignment
       'Align': "Wyr\xF3wnaj",
       'Align Left': "Wyr\xF3wnaj do lewej",
@@ -60,6 +79,11 @@
       'Align Right': "Wyr\xF3wnaj do prawej",
       'Align Justify': 'Do lewej i prawej',
       'None': "\u017Baden",
+      'Alignment': 'Wyrównanie',
+      'Next': 'Następny',
+      'Previous': 'Poprzedni',
+      'Advanced Options': 'Opcje zaawansowane',
+      'Close': 'Zamknij',
       // Lists
       'Ordered List': "Uporz\u0105dkowana lista",
       'Unordered List': "Lista nieuporz\u0105dkowana",
@@ -132,6 +156,30 @@
       'Align Middle': "Wyr\xF3wnaj \u015Brodku",
       'Align Bottom': "Wyr\xF3wnaj do do\u0142u",
       'Cell Style': "Styl kom\xF3rki",
+      'Table Properties': 'Właściwości tabeli',
+      'Cell Properties': 'Właściwości komórki',
+      'Table Footer': 'Stopka tabeli',
+      'Dimensions': 'Wymiary',
+      'Custom background color input': 'Niestandardowe wprowadzenie koloru tła',
+      'Background color picker': 'Selektor koloru tła',
+      'Custom border color input': 'Niestandardowe wprowadzenie koloru obramowania',
+      'Border color picker': 'Selektor koloru obramowania',
+      'Border width': 'Szerokość obramowania',
+      'Border style': 'Styl graniczny',
+      'Border color': 'Kolor obramowania',
+      'Table width': 'Szerokość stołu',
+      'Table height': 'Wysokość stołu',
+      'Left align': 'Wyrównaj do lewej',
+      'Center align': 'Wyśrodkuj',
+      'Right align': 'Wyrównaj do prawej',
+      'solid': 'Linia ciągła',
+      'dashed': 'Linia kreskowana',
+      'double': 'Podwójnie',
+      'dotted': 'Linia kropkowana',
+      'groove': 'Linia żłobiona',
+      'ridge': 'Linia wypukła',
+      'inset': 'Linia wewnętrzna',
+      'outset': 'Linia zewnętrzna',
       // Files
       'Upload File': "Prze\u015Blij plik",
       'Drop file': "Upu\u015Bci\u0107 plik",
@@ -206,6 +254,7 @@
       'Clear Formatting': "Usu\u0144 formatowanie",
       // Save
       'Save': "Zapisa\u0107",
+      'Ok': 'OK',
       // Undo, redo
       'Undo': 'Cofnij',
       'Redo': "Pon\xF3w",
@@ -265,14 +314,49 @@
       'Word Paste Detected': 'Wykryto sformatowany tekst',
       // Character Counter
       'Characters': 'Znaki',
+      // Find and Replace
+      'Find and Replace': 'Znajdź i zamień',
+      'Find': 'Znajdować',
+      'Replace with': 'Zamień na',
+      'Replace All': 'Zamień wszystko',
+      'Match case': 'Sprawa dopasowania',
+      'Whole words only': 'Tylko całe słowa',
       // More Buttons
       'More Text': 'Więcej Tekst',
       'More Paragraph': 'Więcej Ustęp',
       'More Rich': 'Więcej Bogaty',
-      'More Misc': 'Więcej Misc'
+      'More Misc': 'Więcej Misc',
+      'Border': 'Granica',
+      // selector icon
+      'Select Table': 'Wybierz opcję Tabela',
+      'Drag Table': 'Przeciągnij tabelę',
+      'Select PageBreak': 'Wybierz podział strony',
+      'Drag PageBreak': 'Przeciągnij podział strony',
+      'Page Break': 'Przerwa strony',
+      //Link to anchor
+      'Insert Anchor': 'Wstaw kotwicę',
+      'There are no entries matching': 'Nie ma pasujących wpisów',
+      'Update Anchor': 'Zaktualizuj kotwicę',
+      'Edit Anchor': 'Edytuj kotwicę',
+      'Anchor Name': 'Nazwa kotwicy',
+      'Anchor Link': 'Łącze kotwicy',
+      'Scroll to target': 'Przewiń do celu',
+      'Enter the anchor name without space': 'Wprowadź nazwę kotwicy bez spacji',
+      'Anchor name already exists.': 'Nazwa kotwicy już istnieje.',
+      //Export to Word
+      'Export to Word': 'Eksport do Worda',
+      'Ensure that all required dependent libraries are available for the plugin to work.': 'Upewnij się, że wszystkie wymagane biblioteki zależne są dostępne, aby wtyczka mogła działać.',
+      // Import_from_word
+      'Import from Word': 'Importuj z Worda',
+      'Please upload a valid file': 'Proszę przesłać ważny plik.',
+      'File size must be less than': 'Rozmiar pliku musi być mniejszy niż',
+      //Code Snippet
+      'Code Snippet': 'Fragment kodu',
+      'Insert Code Snippet': 'Wstaw fragment kodu',
+      'Edit Code Snippet': 'Edytuj fragment kodu'
     },
     direction: 'ltr'
   };
 
-})));
+}));
 //# sourceMappingURL=pl.js.map

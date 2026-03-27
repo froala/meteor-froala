@@ -1,20 +1,19 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
-
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
   /**
    * Montenegrin
    */
+
   FE.LANGUAGE['me'] = {
     translation: {
       // Place holder
@@ -24,6 +23,7 @@
       'Italic': 'Italic',
       'Underline': "Podvu\u010Deno",
       'Strikethrough': "Prekri\u017Eano",
+      'Size': 'Veličina',
       // Main buttons
       'Insert': 'Umetni',
       'Delete': "Obri\u0161i",
@@ -39,6 +39,7 @@
       'Font Size': "Veli\u010Dina fonta",
       // Colors
       'Colors': 'Boje',
+      'Color': 'Boja',
       'Background': 'Pozadine',
       'Text': 'Teksta',
       'HEX Color': 'HEX boje',
@@ -53,6 +54,7 @@
       // Style
       'Paragraph Style': 'Paragraf stil',
       'Inline Style': 'Inline stil',
+      'Padding': 'Padding',
       // Alignment
       'Align': 'Poravnaj',
       'Align Left': 'Poravnaj lijevo',
@@ -60,6 +62,11 @@
       'Align Right': 'Poravnaj desno',
       'Align Justify': 'Cjelokupno poravnanje',
       'None': 'Nijedan',
+      'Alignment': 'Poravnanje',
+      'Next': 'Sljedeće',
+      'Previous': 'Prethodno',
+      'Advanced Options': 'Napredne opcije',
+      'Close': 'Zatvori',
       // Lists
       'Ordered List': "Ure\u0111ena lista",
       'Unordered List': "Nesre\u0111ene lista",
@@ -132,6 +139,30 @@
       'Align Middle': 'Poravnaj srednji',
       'Align Bottom': 'Poravnaj dno',
       'Cell Style': "\u0106elija stil",
+      'Table Properties': 'Svojstva tabele',
+      'Cell Properties': "\u0106elija svojstva",
+      'Table Footer': 'Fusnota tabele',
+      'Dimensions': 'Dimenzije',
+      'Custom background color input': 'Unos prilagođene boje pozadine',
+      'Background color picker': 'Izbor boje pozadine',
+      'Custom border color input': 'Unos prilagođene boje ivice',
+      'Border color picker': 'Izbor boje ivice',
+      'Border width': 'Širina ivice',
+      'Border style': 'Stil ivice',
+      'Border color': 'Boja ivice',
+      'Table width': 'Širina tabele',
+      'Table height': 'Visina tabele',
+      'Left align': 'Poravnaj lijevo',
+      'Center align': 'Poravnaj centar',
+      'Right align': 'Poravnaj desno',
+      'solid': 'Puna linija',
+      'dashed': 'Iscrtana linija',
+      'dotted': 'Tačkasta linija',
+      'double': 'Dvostruka linija',
+      'groove': 'Urezana linija',
+      'ridge': 'Izdignuta linija',
+      'inset': 'Unutrašnja linija',
+      'outset': 'Vanjska linija',
       // Files
       'Upload File': 'Upload datoteke',
       'Drop file': 'Drop datoteke',
@@ -206,6 +237,7 @@
       'Clear Formatting': 'Izbrisati formatiranje',
       // Save
       'Save': 'Save',
+      'Ok': 'U redu',
       // Undo, redo
       'Undo': 'Korak nazad',
       'Redo': 'Korak naprijed',
@@ -265,14 +297,49 @@
       'Word Paste Detected': 'Word Nalepi otkriven',
       // Character Counter
       'Characters': 'Likovi',
+      // Find and Replace
+      'Find and Replace': 'Pronađi i zamijeni',
+      'Find': 'Pronađi',
+      'Replace with': 'Zamijeni sa',
+      'Replace All': 'Zamijeni sve',
+      'Match case': 'Uskladi velika i mala slova',
+      'Whole words only': 'Samo cijele riječi',
       // More Buttons
       'More Text': 'More tekst',
       'More Paragraph': 'More Paragraf',
       'More Rich': 'More Rich',
-      'More Misc': 'More Misc'
+      'More Misc': 'More Misc',
+      'Border': 'Ivice',
+      // selector icon
+      'Select Table': 'Izaberi tabelu',
+      'Drag Table': 'Povuci tabelu',
+      'Select PageBreak': 'Izaberi prekid stranice',
+      'Drag PageBreak': 'Povuci prekid stranice',
+      'Page Break': 'Prekid stranice',
+      //Link to anchor
+      'Insert Anchor': 'Umetni sidro',
+      'There are no entries matching': 'Nema unosa koji odgovaraju',
+      'Update Anchor': 'Ažuriraj sidro',
+      'Edit Anchor': 'Uredi sidro',
+      'Anchor Name': 'Naziv sidra',
+      'Anchor Link': 'Link sidra',
+      'Scroll to target': 'Skroluj do odredišta',
+      'Enter the anchor name without space': 'Unesite naziv sidra bez razmaka',
+      'Anchor name already exists.': 'Naziv sidra već postoji.',
+      // Export to Word
+      'Export to Word': 'Izvezi u Word',
+      'Ensure that all required dependent libraries are available for the plugin to work.': 'Osigurajte da su sve potrebne zavisne biblioteke dostupne kako bi dodatak radio.',
+      // Import_from_word
+      'Import from Word': 'Uvezi iz Worda',
+      'Please upload a valid file': 'Molimo Vas da otpremite važeći fajl.',
+      'File size must be less than': 'Veličina datoteke mora biti manja od',
+      //Code Snippet
+      'Code Snippet': 'Isječak koda',
+      'Insert Code Snippet': 'Umetni isječak koda',
+      'Edit Code Snippet': 'Uredi isječak koda'
     },
     direction: 'ltr'
   };
 
-})));
+}));
 //# sourceMappingURL=me.js.map

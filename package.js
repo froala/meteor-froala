@@ -1,7 +1,7 @@
 Package.describe({
   name: "froala:editor",
   summary: "A beautiful Javascript WYSIWYG HTML rich text editor.",
-  version: "3.1.0",
+  version: "5.0.1",
   git: "https://github.com/froala/meteor-froala/"
 });
 
@@ -74,6 +74,7 @@ Package.onUse(function(api) {
     "assets/js/plugins/url.min.js",
     "assets/js/plugins/video.min.js",
     "assets/js/plugins/word_paste.min.js",
+    "assets/js/plugins/word_counter.min.js",
 
     // 3rd Party
     "assets/js/third_party/embedly.min.js",

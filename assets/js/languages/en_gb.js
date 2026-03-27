@@ -1,20 +1,19 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
-
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
   /**
    * English spoken in Great Britain
    */
+
   FE.LANGUAGE['en_gb'] = {
     translation: {
       // Place holder
@@ -24,6 +23,7 @@
       'Italic': 'Italic',
       'Underline': 'Underline',
       'Strikethrough': 'Strikethrough',
+      'Size': 'Size',
       // Main buttons
       'Insert': 'Insert',
       'Delete': 'Delete',
@@ -39,6 +39,7 @@
       'Font Size': 'Font Size',
       // Colors
       'Colors': 'Colours',
+      'Color': 'Color',
       'Background': 'Background',
       'Text': 'Text',
       'HEX Color': 'HEX Colour',
@@ -53,6 +54,7 @@
       // Style
       'Paragraph Style': 'Paragraph Style',
       'Inline Style': 'Inline Style',
+      'Padding': 'Padding',
       // Alignment
       'Align': 'Align',
       'Align Left': 'Align Left',
@@ -60,6 +62,11 @@
       'Align Right': 'Alight Right',
       'Align Justify': 'Align Justify',
       'None': 'None',
+      'Alignment': 'Alignment',
+      'Next': 'Next',
+      'Previous': 'Previous',
+      'Advanced Options': 'Advanced Options',
+      'Close': 'Close',
       // Lists
       'Ordered List': 'Ordered List',
       'Unordered List': 'Unordered List',
@@ -132,6 +139,30 @@
       'Align Middle': 'Align Middle',
       'Align Bottom': 'Align Bottom',
       'Cell Style': 'Cell Style',
+      'Table Properties': 'Table Properties',
+      'Cell Properties': 'Cell Properties',
+      'Table Footer': 'Table Footer',
+      'Dimensions': 'Dimensions',
+      'Custom background colour input': 'Custom background colour input',
+      'Background colour picker': 'Background colour picker',
+      'Custom border colour input': 'Custom border colour input',
+      'Border colour picker': 'Border colour picker',
+      'Border width': 'Border width',
+      'Border style': 'Border style',
+      'Border colour': 'Border colour',
+      'Table width': 'Table width',
+      'Table height': 'Table height',
+      'Left align': 'Left align',
+      'Center align': 'Centre align',
+      'Right align': 'Right align',
+      'solid': 'solid',
+      'dashed': 'dashed',
+      'dotted': 'dotted',
+      'double': 'double',
+      'groove': 'groove',
+      'ridge': 'ridge',
+      'inset': 'inset',
+      'outset': 'outset',
       // Files
       'Upload File': 'Upload File',
       'Drop file': 'Drop file',
@@ -150,6 +181,7 @@
       'Clear Formatting': 'Cell Formatting',
       // Save
       'Save': 'Save',
+      'Ok': 'Ok',
       // Undo, redo
       'Undo': 'Undo',
       'Redo': 'Redo',
@@ -213,10 +245,38 @@
       'More Text': 'More Text',
       'More Paragraph': 'More Paragraph',
       'More Rich': 'More Rich',
-      'More Misc': 'More Misc'
+      'More Misc': 'More Misc',
+      'Border': 'Border',
+      //selector icon
+      'Select Table': 'Select Table',
+      'Drag Table': 'Drag Table',
+      'Select PageBreak': 'Select Page Break',
+      'Drag PageBreak': 'Drag Page Break',
+      'Page Break': 'Page Break',
+      // link to anchor
+      'Insert Anchor': 'Insert Anchor',
+      'There are no entries matching': 'There are no entries matching',
+      'Update Anchor': 'Update Anchor',
+      'Edit Anchor': 'Edit Anchor',
+      'Anchor Name': 'Anchor Name',
+      'Anchor Link': 'Anchor Link',
+      'Scroll to target': 'Scroll to target',
+      'Enter the anchor name without space': 'Enter the anchor name without a space',
+      'Anchor name already exists.': 'The anchor name already exists.',
+      // Export to Word
+      'Export to Word': 'Export to Word',
+      'Ensure that all required dependent libraries are available for the plugin to work.': 'Ensure that all required dependent libraries are available for the plugin to work.',
+      // Import_from_word
+      'Import from Word': 'Import from Word',
+      'Please upload a valid file': 'Please upload a valid file',
+      'File size must be less than': 'File size must be less than',
+      //Code Snippet
+      'Code Snippet': 'Code Snippet',
+      'Insert Code Snippet': 'Insert Code Snippet',
+      'Edit Code Snippet': 'Edit Code Snippet'
     },
     direction: 'ltr'
   };
 
-})));
+}));
 //# sourceMappingURL=en_gb.js.map

@@ -1,22 +1,41 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  function _defineProperty(e, r, t) {
+    return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, {
+      value: t,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    }) : e[r] = t, e;
+  }
+  function _toPrimitive(t, r) {
+    if ("object" != typeof t || !t) return t;
+    var e = t[Symbol.toPrimitive];
+    if (void 0 !== e) {
+      var i = e.call(t, r);
+      if ("object" != typeof i) return i;
+      throw new TypeError("@@toPrimitive must return a primitive value.");
+    }
+    return ("string" === r ? String : Number)(t);
+  }
+  function _toPropertyKey(t) {
+    var i = _toPrimitive(t, "string");
+    return "symbol" == typeof i ? i : i + "";
+  }
 
-  /**
-  * Hebrew
-  */
+  var _translation;
   FE.LANGUAGE['he'] = {
-    translation: {
+    translation: (_translation = {
       // Place holder
       'Type something': "\u05D4\u05E7\u05DC\u05D3 \u05DB\u05D0\u05DF",
       // Basic formatting
@@ -24,6 +43,7 @@
       'Italic': "\u05DE\u05D5\u05D8\u05D4",
       'Underline': "\u05E7\u05D5 \u05EA\u05D7\u05EA\u05D9",
       'Strikethrough': "\u05E7\u05D5 \u05D0\u05DE\u05E6\u05E2\u05D9",
+      'Size': 'גודל',
       // Main buttons
       'Insert': "\u05D4\u05D5\u05E1\u05E4\u05EA",
       'Delete': "\u05DE\u05D7\u05D9\u05E7\u05D4",
@@ -39,6 +59,7 @@
       'Font Size': "\u05D2\u05D5\u05D3\u05DC \u05D4\u05D2\u05D5\u05E4\u05DF",
       // Colors
       'Colors': "\u05E6\u05D1\u05E2\u05D9\u05DD",
+      'Color': 'צבע',
       'Background': "\u05E8\u05E7\u05E2",
       'Text': "\u05D4\u05D8\u05E1\u05D8",
       'HEX Color': 'צבע הקס',
@@ -53,6 +74,7 @@
       // Style
       'Paragraph Style': "\u05E1\u05D2\u05E0\u05D5\u05DF \u05E4\u05E1\u05E7\u05D4",
       'Inline Style': "\u05E1\u05D2\u05E0\u05D5\u05DF \u05DE\u05D5\u05D1\u05E0\u05D4",
+      'Padding': 'ריווח פנימי',
       // Alignment
       'Align': "\u05D9\u05D9\u05E9\u05D5\u05E8",
       'Align Left': "\u05D9\u05D9\u05E9\u05D5\u05E8 \u05DC\u05E9\u05DE\u05D0\u05DC",
@@ -60,6 +82,11 @@
       'Align Right': "\u05D9\u05D9\u05E9\u05D5\u05E8 \u05DC\u05D9\u05DE\u05D9\u05DF",
       'Align Justify': "\u05D9\u05D9\u05E9\u05D5\u05E8 \u05DE\u05DC\u05D0",
       'None': "\u05D0\u05E3 \u05D0\u05D7\u05D3",
+      'Alignment': 'יישור',
+      'Next': 'הבא',
+      'Previous': 'קודם',
+      'Advanced Options': 'אפשרויות מתקדמות',
+      'Close': 'סגור',
       // Lists
       'Ordered List': "\u05D4\u05D5\u05E1\u05E4\u05EA \u05E8\u05E9\u05D9\u05DE\u05D4 \u05DE\u05DE\u05D5\u05E1\u05E4\u05E8\u05EA",
       'Unordered List': "\u05D4\u05D5\u05E1\u05E4\u05EA \u05E8\u05E9\u05D9\u05DE\u05D4",
@@ -132,6 +159,30 @@
       'Align Middle': "\u05DC\u05D9\u05D9\u05E9\u05E8 \u05EA\u05B4\u05D9\u05DB\u05D5\u05B9\u05E0\u05B4\u05D9",
       'Align Bottom': "\u05DC\u05D9\u05D9\u05E9\u05E8 \u05EA\u05D7\u05EA\u05D5\u05DF",
       'Cell Style': "\u05E1\u05D2\u05E0\u05D5\u05DF \u05EA\u05D0",
+      'Table Properties': 'מאפייני טבלה',
+      'Cell Properties': 'מאפייני תא',
+      'Table Footer': 'כותרת תחתונה של הטבלה',
+      'Dimensions': 'ממדים',
+      'Custom background color input': 'קלט צבע רקע מותאם אישית',
+      'Background color picker': 'בוחר צבע רקע',
+      'Custom border color input': 'קלט צבע גבול מותאם אישית',
+      'Border color picker': 'בוחר צבע גבול',
+      'Border width': 'רוחב גבול',
+      'Border style': 'סגנון גבול',
+      'Border color': 'צבע גבול',
+      'Table width': 'רוחב טבלה',
+      'Table height': 'גובה טבלה',
+      'Left align': 'יישור לשמאל',
+      'Center align': 'יישור למרכז',
+      'Right align': 'יישור לימין',
+      'solid': 'קו רציף',
+      'dashed': 'קו מקווקו',
+      'dotted': 'קו מנוקד',
+      'double': 'קו כפול',
+      'groove': 'קו משוקע',
+      'ridge': 'קו בולט',
+      'inset': 'קו פנימי',
+      'outset': 'קו חיצוני',
       // Files
       'Upload File': "\u05D4\u05E2\u05DC\u05D0\u05EA \u05E7\u05D5\u05D1\u05E5",
       'Drop file': "\u05D6\u05E8\u05D5\u05E7 \u05E7\u05D5\u05D1\u05E5 \u05DB\u05D0\u05DF",
@@ -206,6 +257,7 @@
       'Clear Formatting': "\u05DC\u05D4\u05E1\u05D9\u05E8 \u05E2\u05D9\u05E6\u05D5\u05D1",
       // Save
       'Save': "\u05DC\u05D4\u05E6\u05D9\u05DC",
+      'Ok': 'אישור',
       // Undo, redo
       'Undo': "\u05D1\u05D9\u05D8\u05D5\u05DC",
       'Redo': "\u05D1\u05E6\u05E2 \u05E9\u05D5\u05D1",
@@ -265,14 +317,14 @@
       'Word Paste Detected': 'הדבק מילה זוהתה',
       // Character Counter 
       'Characters': 'תווים',
-      // More Buttons
-      'More Text': 'עוד טקסט',
-      'More Paragraph': 'עוד סעיף',
-      'More Rich': 'עוד  עשיר',
-      'More Misc': 'שונות עוד'
-    },
+      // Find and Replace
+      'Find and Replace': 'חפש והחלף',
+      'Find': 'חפש',
+      'Replace with': 'החלף ב-',
+      'Replace All': 'החלף הכל'
+    }, _defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_translation, "Advanced Options", 'אפשרויות מתקדמות'), 'Match case', 'התאם בין אותיות גדולות וקטנות'), 'Whole words only', 'רק מילים שלמות'), 'More Text', 'עוד טקסט'), 'More Paragraph', 'עוד סעיף'), 'More Rich', 'עוד  עשיר'), 'More Misc', 'שונות עוד'), 'Border', 'גבול'), "Dimensions", 'ממדים'), 'Select Table', 'בחר טבלה'), _defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_translation, 'Drag Table', 'גרור טבלה'), 'Select PageBreak', 'בחר הפסקת עמוד'), 'Drag PageBreak', 'גרור הפסקת עמוד'), 'Page Break', 'הפסקת עמוד'), 'Insert Anchor', 'הוספת עוגן'), 'There are no entries matching', 'אין רשומות תואמות'), 'Update Anchor', 'עדכון עוגן'), 'Edit Anchor', 'עריכת עוגן'), 'Anchor Name', 'שם העוגן'), 'Anchor Link', 'קישור העוגן'), _defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_translation, 'Scroll to target', 'גלול אל היעד'), 'Enter the anchor name without space', 'הקלד את שם העוגן ללא רווח'), 'Anchor name already exists.', 'שם העוגן כבר קיים.'), 'Export to Word', 'ייצוא למילה'), 'Ensure that all required dependent libraries are available for the plugin to work.', 'ודא שכל ספריות התלויות הנדרשות זמינות כדי שהתוסף יעבוד.'), 'Import from Word', 'ייבוא מ-Word'), 'Please upload a valid file', 'אנא העלה קובץ תקין.'), 'File size must be less than', 'גודל הקובץ חייב להיות קטן מ-'), 'Code Snippet', 'קטע קוד'), 'Insert Code Snippet', 'הוסף קטע קוד'), _defineProperty(_translation, 'Edit Code Snippet', 'ערוך קטע קוד')),
     direction: 'rtl'
   };
 
-})));
+}));
 //# sourceMappingURL=he.js.map

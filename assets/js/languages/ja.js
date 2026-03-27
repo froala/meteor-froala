@@ -1,20 +1,19 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
-
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
   /**
    * Japanese
    */
+
   FE.LANGUAGE['ja'] = {
     translation: {
       // Place holder
@@ -24,6 +23,7 @@
       'Italic': "\u659C\u4F53",
       'Underline': "\u4E0B\u7DDA",
       'Strikethrough': "\u53D6\u308A\u6D88\u3057\u7DDA",
+      'Size': 'サイズ',
       // Main buttons
       'Insert': "\u633F\u5165",
       'Delete': "\u524A\u9664",
@@ -39,6 +39,7 @@
       'Font Size': "\u30D5\u30A9\u30F3\u30C8\u30B5\u30A4\u30BA",
       // Colors
       'Colors': "\u8272",
+      'Color': '色',
       'Background': "\u80CC\u666F",
       'Text': "\u30C6\u30AD\u30B9\u30C8",
       'HEX Color': "\u30D8\u30AD\u30B5\u306E\u8272",
@@ -53,6 +54,7 @@
       // Style
       'Paragraph Style': "\u6BB5\u843D\u30B9\u30BF\u30A4\u30EB",
       'Inline Style': "\u30A4\u30F3\u30E9\u30A4\u30F3\u30B9\u30BF\u30A4\u30EB",
+      'Padding': 'パディング',
       // Alignment
       'Align': "\u914D\u7F6E",
       'Align Left': "\u5DE6\u63C3\u3048",
@@ -60,6 +62,11 @@
       'Align Right': "\u53F3\u63C3\u3048",
       'Align Justify': "\u4E21\u7AEF\u63C3\u3048",
       'None': "\u306A\u3057",
+      'Alignment': '配置',
+      'Next': '次へ',
+      'Previous': '前へ',
+      'Advanced Options': '詳細オプション',
+      'Close': '閉じる',
       // Lists
       'Ordered List': "\u6BB5\u843D\u756A\u53F7",
       'Unordered List': "\u7B87\u6761\u66F8\u304D",
@@ -132,6 +139,30 @@
       'Align Middle': "\u4E2D\u592E\u306B\u63C3\u3048\u307E\u3059",
       'Align Bottom': "\u4E0B\u306B\u63C3\u3048\u307E\u3059",
       'Cell Style': "\u30BB\u30EB\u30B9\u30BF\u30A4\u30EB",
+      'Table Properties': 'テーブルのプロパティ',
+      'Cell Properties': 'セルのプロパティ',
+      'Table Footer': '表のフッター',
+      'Dimensions': '寸法',
+      'Custom background color input': 'カスタム背景色入力',
+      'Background color picker': '背景色ピッカー',
+      'Custom border color input': 'カスタム枠線色入力',
+      'Border color picker': '枠線色ピッカー',
+      'Border width': '枠線の幅',
+      'Border style': '枠線のスタイル',
+      'Border color': '枠線の色',
+      'Table width': '表の幅',
+      'Table height': '表の高さ',
+      'Left align': '左揃え',
+      'Center align': '中央揃え',
+      'Right align': '右揃え',
+      'solid': '実線',
+      'dashed': '破線',
+      'dotted': '点線',
+      'double': '二重線',
+      'groove': '溝線',
+      'ridge': '隆起線',
+      'inset': '内側の線',
+      'outset': '外側の線',
       // Files
       'Upload File': "\u30D5\u30A1\u30A4\u30EB\u306E\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9",
       'Drop file': "\u30D5\u30A1\u30A4\u30EB\u3092\u30C9\u30E9\u30C3\u30B0&\u30C9\u30ED\u30C3\u30D7",
@@ -206,6 +237,7 @@
       'Clear Formatting': "\u66F8\u5F0F\u306E\u30AF\u30EA\u30A2",
       // Save
       'Save': "\u30BB\u30FC\u30D6",
+      'Ok': 'OK',
       // Undo, redo
       'Undo': "\u5143\u306B\u623B\u3059",
       'Redo': "\u3084\u308A\u76F4\u3059",
@@ -265,14 +297,53 @@
       'Word Paste Detected': "Microsoft Word\u306E\u8CBC\u308A\u4ED8\u3051\u304C\u691C\u51FA\u3055\u308C\u307E\u3057\u305F",
       // Character Counter
       'Characters': '文字数',
+      // Find and Replace
+      'Find and Replace': '検索と置換',
+      'Find': '検索',
+      'Replace with': '置換後の文字列',
+      'Replace All': 'すべて置換',
+      'Match case': '大文字と小文字を区別',
+      'Whole words only': '単語全体のみ',
       // More Buttons
       'More Text': 'より多くのテキスト',
       'More Paragraph': 'もっと段落',
       'More Rich': 'もっとリッチ',
-      'More Misc': 'その他'
+      'More Misc': 'その他',
+      'Text Color': 'テキストの色',
+      'Background Color': '背景色',
+      'Line Height': '行の高さ',
+      //
+      'Border': '枠線',
+      // selector icon
+      'Select Table': '表を選択',
+      'Drag Table': '表をドラッグ',
+      'Select PageBreak': '改ページを選択',
+      'Drag PageBreak': '改ページをドラッグ',
+      'Page Break': '改ページ',
+      //Link to anchor
+      'Insert Anchor': 'アンカーを挿入',
+      'There are no entries matching': '一致するエントリがありません',
+      'Update Anchor': 'アンカーを更新',
+      'Edit Anchor': 'アンカーを編集',
+      'Anchor Name': 'アンカー名',
+      'Anchor Link': 'アンカーリンク',
+      'Scroll to target': 'ターゲットまでスクロール',
+      'Enter the anchor name without space': 'スペースを入れずにアンカー名を入力してください',
+      'Anchor name already exists.': 'アンカー名はすでに存在します。',
+      //export to word
+      'Export to Word': 'Wordにエクスポート',
+      'Ensure that all required dependent libraries are available for the plugin to work.': 'プラグインが機能するために必要なすべての依存ライブラリが利用可能であることを確認してください。',
+      // Import_from_word
+      'Import from Word': 'Wordからインポート',
+      'Please upload a valid file': '有効なファイルをアップロードしてください。',
+      'File size must be less than': 'ファイルサイズは以下である必要があります',
+      //Code Snippet
+      'Code Snippet': 'コードスニペット',
+      'Insert Code Snippet': 'コードスニペットを挿入',
+      'Edit Code Snippet': 'コードスニペットを編集'
     },
     direction: 'ltr'
   };
 
-})));
+}));
 //# sourceMappingURL=ja.js.map

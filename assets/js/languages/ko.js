@@ -1,29 +1,49 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
-
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
   /**
    * Korean
    */
+
   FE.LANGUAGE['ko'] = {
     translation: {
       // Place holder
       'Type something': "\uB0B4\uC6A9\uC744 \uC785\uB825\uD558\uC138\uC694",
+      // Missing translations
+      'More Text': '더 많은 텍스트',
+      'Text Color': '텍스트 색상',
+      'Background Color': '배경색',
+      'Inline Class': '인라인 클래스',
+      'Default': '기본값',
+      'Lower Alpha': '소문자 알파',
+      'Lower Greek': '그리스어 소문자',
+      'Lower Roman': '로만 소문자',
+      'Upper Alpha': '알파 대문자',
+      'Upper Roman': '로만 대문자',
+      'Circle': '서클',
+      'Disc': '디스크',
+      'Square': '정사각형',
+      'Single': '싱글',
+      'Double': '더블',
+      'More Rich': '풍부한 콘텐츠',
+      'More Misc': '더 기타',
+      'Insert Files': '파일 삽입',
+      'Download PDF': 'PDF 다운로드',
       // Basic formatting
       'Bold': "\uAD75\uAC8C",
       'Italic': "\uAE30\uC6B8\uC784\uAF34",
       'Underline': "\uBC11\uC904",
       'Strikethrough': "\uCDE8\uC18C\uC120",
+      'Size': '크기',
       // Main buttons
       'Insert': "\uC0BD\uC785",
       'Delete': "\uC0AD\uC81C",
@@ -39,6 +59,7 @@
       'Font Size': "\uD3F0\uD2B8 \uD06C\uAE30",
       // Colors
       'Colors': "\uC0C9\uC0C1",
+      'Color': '색상',
       'Background': "\uBC30\uACBD",
       'Text': "\uD14D\uC2A4\uD2B8",
       'HEX Color': "\uD5E5\uC2A4 \uC0C9\uC0C1",
@@ -53,6 +74,7 @@
       // Style
       'Paragraph Style': "\uB2E8\uB77D \uC2A4\uD0C0\uC77C",
       'Inline Style': "\uC778\uB77C\uC778 \uC2A4\uD0C0\uC77C",
+      'Padding': '패딩',
       // Alignment
       'Align': "\uC815\uB82C",
       'Align Left': "\uC67C\uCABD\uC815\uB82C",
@@ -60,6 +82,11 @@
       'Align Right': "\uC624\uB978\uCABD\uC815\uB82C",
       'Align Justify': "\uC591\uCABD\uC815\uB82C",
       'None': "\uC5C6\uC74C",
+      'Alignment': '정렬',
+      'Next': '다음',
+      'Previous': '이전',
+      'Advanced Options': '고급 옵션',
+      'Close': '닫기',
       // Lists
       'Ordered List': "\uC22B\uC790 \uB9AC\uC2A4\uD2B8",
       'Unordered List': "\uC810 \uB9AC\uC2A4\uD2B8",
@@ -132,6 +159,30 @@
       'Align Middle': "\uAC00\uC6B4\uB370\uB85C \uC815\uB82C\uD569\uB2C8\uB2E4.",
       'Align Bottom': "\uC544\uB798\uCABD\uC73C\uB85C \uC815\uB82C\uD569\uB2C8\uB2E4.",
       'Cell Style': "\uC140 \uC2A4\uD0C0\uC77C",
+      'Table Properties': '표 속성',
+      'Cell Properties': '셀 속성',
+      'Table Footer': '표 바닥글',
+      'Dimensions': '치수',
+      'Custom background color input': '사용자 지정 배경색 입력',
+      'Background color picker': '배경색 선택기',
+      'Custom border color input': '사용자 지정 테두리 색 입력',
+      'Border color picker': '테두리 색 선택기',
+      'Border width': '테두리 두께',
+      'Border style': '테두리 스타일',
+      'Border color': '테두리 색상',
+      'Table width': '표 너비',
+      'Table height': '표 높이',
+      'Left align': '왼쪽 정렬',
+      'Center align': '가운데 정렬',
+      'Right align': '오른쪽 정렬',
+      'solid': '실선',
+      'dashed': '파선',
+      'dotted': '점선',
+      'double': '더블',
+      'groove': '홈이 있는 선',
+      'ridge': '돌출된 선',
+      'inset': '내부 선',
+      'outset': '외부 선',
       // Files
       'Upload File': "\uD30C\uC77C \uCCA8\uBD80",
       'Drop file': "\uD30C\uC77C\uC744 \uB4DC\uB798\uADF8&\uB4DC\uB86D",
@@ -206,6 +257,7 @@
       'Clear Formatting': "\uC11C\uC2DD \uC81C\uAC70",
       // Save
       'Save': "\uAD6C\uD558\uB2E4",
+      'Ok': '확인',
       // Undo, redo
       'Undo': "\uC2E4\uD589 \uCDE8\uC18C",
       'Redo': "\uB418\uB3CC\uB9AC\uAE30",
@@ -265,14 +317,46 @@
       'Word Paste Detected': "\uC6CC\uB4DC \uBD99\uC5EC \uB123\uAE30\uAC00 \uAC80\uCD9C \uB418\uC5C8\uC2B5\uB2C8\uB2E4.",
       // Character Counter
       'Characters': '문자',
+      // Find and Replace
+      'Find and Replace': '찾기 및 바꾸기',
+      'Find': '찾기',
+      'Replace with': '다음으로 바꾸기',
+      'Replace All': '모두 바꾸기',
+      'Match case': '대소문자 구분',
+      'Whole words only': '전체 단어만',
       // More Buttons
-      'More Text': '더 본문',
       'More Paragraph': '더 절',
-      'More Rich': '더 풍부한',
-      'More Misc': '더 기타'
+      'Border': '테두리',
+      // selector icon
+      'Select Table': '표 선택',
+      'Drag Table': '표 끌기',
+      'Select PageBreak': '페이지 나누기 선택',
+      'Drag PageBreak': '페이지 나누기 끌기',
+      'Page Break': '페이지 나누기',
+      //Link to anchor
+      'Insert Anchor': '앵커 삽입',
+      'There are no entries matching': '일치하는 항목이 없습니다',
+      'Update Anchor': '앵커 업데이트',
+      'Edit Anchor': '앵커 편집',
+      'Anchor Name': '앵커 이름',
+      'Anchor Link': '앵커 링크',
+      'Scroll to target': '대상으로 스크롤',
+      'Enter the anchor name without space': '공백 없이 앵커 이름을 입력하세요',
+      'Anchor name already exists.': '앵커 이름이 이미 존재합니다.',
+      //Export to Word
+      'Export to Word': '워드로 내보내기',
+      'Ensure that all required dependent libraries are available for the plugin to work.': '플러그인이 작동하려면 필요한 모든 종속 라이브러리가 사용 가능한지 확인하십시오.',
+      // Import_from_word
+      'Import from Word': 'Word에서 가져오기',
+      'Please upload a valid file': '유효한 파일을 업로드하십시오.',
+      'File size must be less than': '파일 크기는 다음 미만이어야 합니다.',
+      //Code Snippet
+      'Code Snippet': '코드 조각',
+      'Insert Code Snippet': '코드 조각 삽입',
+      'Edit Code Snippet': '코드 조각 편집'
     },
     direction: 'ltr'
   };
 
-})));
+}));
 //# sourceMappingURL=ko.js.map

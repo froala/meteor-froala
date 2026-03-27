@@ -1,20 +1,19 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
-
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
   /**
    * Finnish
    */
+
   FE.LANGUAGE['fi'] = {
     translation: {
       // Place holder
@@ -24,6 +23,7 @@
       'Italic': 'Kursivointi',
       'Underline': 'Alleviivaus',
       'Strikethrough': 'Yliviivaus',
+      'Size': 'Koko',
       // Main buttons
       'Insert': "Lis\xE4\xE4",
       'Delete': 'Poista',
@@ -39,6 +39,7 @@
       'Font Size': 'Fonttikoko',
       // Colors
       'Colors': "V\xE4rit",
+      'Color': 'Väri',
       'Background': 'Taustan',
       'Text': 'Tekstin',
       'HEX Color': 'Heksadesimaali',
@@ -53,6 +54,7 @@
       // Style
       'Paragraph Style': 'Kappaleen tyyli',
       'Inline Style': 'Linjassa tyyli',
+      'Padding': 'pehmuste',
       // Alignment
       'Align': 'Tasaa',
       'Align Left': 'Tasaa vasemmalle',
@@ -60,6 +62,11 @@
       'Align Right': 'Tasaa oikealle',
       'Align Justify': 'Tasaa',
       'None': "Ei mit\xE4\xE4n",
+      'Alignment': 'Tasaus',
+      'Next': 'Seuraavaksi',
+      'Previous': 'Edellinen',
+      'Advanced Options': 'Lisäasetukset',
+      'Close': 'Close',
       // Lists
       'Ordered List': "J\xE4rjestetty lista",
       'Unordered List': "J\xE4rjest\xE4m\xE4t\xF6n lista",
@@ -88,7 +95,7 @@
       'Replace': 'Vaihda',
       'Uploading': 'Lataaminen',
       'Loading image': 'Lastaus kuva',
-      'Display': "N\xE4ytt\xE4",
+      'Display': 'N\xE4ytt\xF6',
       'Inline': 'Linjassa',
       'Break Text': 'Rikkoa teksti',
       'Alternative Text': 'Vaihtoehtoinen teksti',
@@ -132,6 +139,30 @@
       'Align Middle': "Tasaa keskimm\xE4inen",
       'Align Bottom': 'Tasaa pohja',
       'Cell Style': 'Solun tyyli',
+      'Table Properties': 'Taulukon ominaisuudet',
+      'Cell Properties': 'Solun ominaisuudet',
+      'Table Footer': 'Taulukon alatunniste',
+      'Dimensions': 'Mitat',
+      'Custom background color input': 'Mukautettu taustavärin syöttö',
+      'Background color picker': 'Taustavärin valitsin',
+      'Custom border color input': 'Mukautettu reunuksen värin syöttö',
+      'Border color picker': 'Reunuksen värinvalitsin',
+      'Border width': 'Reunuksen leveys',
+      'Border style': 'Reunuksen tyyli',
+      'Border color': 'Reunuksen väri',
+      'Table width': 'Pöydän leveys',
+      'Table height': 'Pöydän korkeus',
+      'Left align': 'Tasaa vasemmalle',
+      'Center align': 'Keskitä',
+      'Right align': 'Oikea tasaus',
+      'solid': 'Yhtenäinen viiva',
+      'dashed': 'Katkoviiva',
+      'dotted': 'Pisteviiva',
+      'double': 'Kaksoisviiva',
+      'groove': 'Urvallinen viiva',
+      'ridge': 'Kohoviiva',
+      'inset': 'Sisäviiva',
+      'outset': 'Ulkoviiiva',
       // Files
       'Upload File': 'Lataa tiedosto',
       'Drop file': 'Pudota tiedosto',
@@ -206,6 +237,7 @@
       'Clear Formatting': 'Poista muotoilu',
       // Save
       'Save': 'Tallentaa',
+      'Ok': 'Ok',
       // Undo, redo
       'Undo': 'Peru',
       'Redo': 'Tee uudelleen',
@@ -265,14 +297,49 @@
       'Word Paste Detected': 'Sana-tahna havaittu',
       // Character Counter 
       'Characters': 'merkit',
+      // Find and Replace
+      'Find and Replace': 'Etsi ja korvaa',
+      'Find': 'Löytää',
+      'Replace with': 'Korvaa kanssa',
+      'Replace All': 'Korvaa kaikki',
+      'Match case': 'Match tapaus',
+      'Whole words only': 'Vain kokonaisia ​​sanoja',
       // More Buttons
       'More Text': 'Lisää tekstiä',
       'More Paragraph': 'Lisää kohta',
       'More Rich': 'Lisää Rikas',
-      'More Misc': 'Lisää Misc'
+      'More Misc': 'Lisää Misc',
+      'Border': 'Raja',
+      // selector icon
+      'Select Table': 'Valitse taulukko',
+      'Drag Table': 'Vedä taulukkoa',
+      'Select PageBreak': 'Valitse sivunvaihto',
+      'Drag PageBreak': 'Vedä sivunvaihto',
+      'Page Break': 'Sivunvaihto',
+      // link to anchor
+      'Insert Anchor': 'Lisää ankkuri',
+      'There are no entries matching': 'Ei ole merkintöjä, jotka vastaavat',
+      'Update Anchor': 'Päivitä ankkuri',
+      'Edit Anchor': 'Muokkaa ankkuria',
+      'Anchor Name': 'Ankkurin nimi',
+      'Anchor Link': 'Ankkurilinkki',
+      'Scroll to target': 'Selaa kohteeseen',
+      'Enter the anchor name without space': 'Syötä ankkurin nimi ilman välilyöntejä',
+      'Anchor name already exists.': 'Ankkurin nimi on jo olemassa.',
+      // Export to Word
+      'Export to Word': 'Vie Wordiin',
+      'Ensure that all required dependent libraries are available for the plugin to work.': 'Varmista, että kaikki tarvittavat riippuvaiset kirjastot ovat käytettävissä liitännäisen toimimiseksi.',
+      // Import_from_word
+      'Import from Word': 'Tuo Wordista',
+      'Please upload a valid file': 'Lataa kelvollinen tiedosto.',
+      'File size must be less than': 'Tiedostokoon täytyy olla alle',
+      //Code Snippet
+      'Code Snippet': 'Koodikatkelma',
+      'Insert Code Snippet': 'Lisää koodikatkelma',
+      'Edit Code Snippet': 'Muokkaa koodikatkelmaa'
     },
     direction: 'ltr'
   };
 
-})));
+}));
 //# sourceMappingURL=fi.js.map

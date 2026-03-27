@@ -1,20 +1,19 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
-
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
   /**
    * Arabic
    */
+
   FE.LANGUAGE['ku'] = {
     translation: {
       // Place holder
@@ -24,6 +23,7 @@
       'Italic': 'لارکردنەوە',
       'Underline': 'هێڵ بەژێردا هێنان',
       'Strikethrough': 'هێڵ بە سەردا هێنان',
+      'Size': 'مقاس',
       // Main buttons
       'Insert': 'خستنە ناو',
       'Delete': 'سڕینەوە',
@@ -39,6 +39,7 @@
       'Font Size': 'قەبارەی فۆنت',
       // Colors
       'Colors': 'ڕەنگەکان',
+      'Color': 'لون',
       'Background': 'پاشبنەما(باکگراوند)',
       'Text': 'دەق',
       // Paragraphs بۆیە ڕەقەمەکانی خوارەوەم نەکردووە بە کوردی لە شوێنی تریش بینیوومە هەروا نوسراوەتەوە
@@ -52,6 +53,7 @@
       // Style
       'Paragraph Style': 'شێوازی پەڕەگراف',
       'Inline Style': 'شێوزای ناو دێڕ',
+      'Padding': 'حشوة',
       // Alignment
       'Align': 'ڕیزکردن',
       'Align Left': 'ڕیزکردن لای چەپەوە',
@@ -59,6 +61,11 @@
       'Align Right': 'ڕیزکردن لای ڕاستەوە',
       'Align Justify': 'هاوڕێک',
       'None': 'هیچ',
+      'Alignment': 'تنسيق',
+      'Next': 'التالي',
+      'Previous': 'سابق',
+      'Advanced Options': 'خيارات متقدمة',
+      'Close': 'يغلق',
       // Lists
       'Ordered List': 'لیستی داواکراو',
       'Unordered List': 'لیستی داوانەکراو',
@@ -125,6 +132,30 @@
       'Align Middle': 'ڕیزکردن لە ناوەڕاستەوە',
       'Align Bottom': 'ڕیزکردن لە خوارەوە',
       'Cell Style': 'شێوازی خانە',
+      'Table Properties': 'خصائص الجدول',
+      'Cell Properties': 'خصائص الخلية',
+      'Table Footer': 'تذييل الجدول',
+      'Dimensions': 'أبعاد',
+      'Custom background color input': 'إدخال لون الخلفية المخصصة',
+      'Background color picker': 'منتقي لون الخلفية',
+      'Custom border color input': 'إدخال لون الحدود المخصصة',
+      'Border color picker': 'منتقي لون الحدود',
+      'Border width': 'عرض الحدود',
+      'Border style': 'نمط الحدود',
+      'Border color': 'لون الحدود',
+      'Table width': 'عرض الطاولة',
+      'Table height': 'ارتفاع الطاولة',
+      'Left align': 'محاذاة لليسار',
+      'Center align': 'محاذاة للوسط',
+      'Right align': 'محاذاة إلى اليمين',
+      'solid': 'خط صلب',
+      'dashed': 'خط متقطع',
+      'dotted': 'خط منقط',
+      'double': 'خط مزدوج',
+      'groove': 'خط محفور',
+      'ridge': 'خط بارز',
+      'inset': 'خط داخلي',
+      'outset': 'خط خارجي',
       // Files
       'Upload File': 'بەرزکردنەوەی پەڕگە',
       'Drop file': 'ڕاکێشانی پەڕگە',
@@ -258,14 +289,49 @@
       'Word Paste Detected': 'Word Paste Detected',
       // Character Counter
       'Characters': 'Characters',
+      //Find and Replace
+      'Find and Replace': 'البحث والاستبدال',
+      'Find': 'يجد',
+      'Replace with': 'استبدل ب',
+      'Replace All': 'استبدال الكل',
+      'Match case': 'حالة المباراة',
+      'Whole words only': 'كلام كامل فقط',
       // More Buttons
       'More Text': 'المزيد من النص',
       'More Paragraph': ' المزيد من الفقرة',
       'More Rich': ' أكثر ثراء',
-      'More Misc': ' أكثر متفرقات'
+      'More Misc': ' أكثر متفرقات',
+      'Border': 'حدود',
+      //selector icon
+      'Select Table': 'حدد الجدول',
+      'Drag Table': 'اسحب الجدول',
+      'Select PageBreak': 'حدد فاصل الصفحة',
+      'Drag PageBreak': 'اسحب فاصل الصفحة',
+      'Page Break': 'فاصل الصفحة',
+      //Link to anchor
+      'Insert Anchor': 'إدراج مرجع',
+      'There are no entries matching': 'لا توجد مدخلات مطابقة',
+      'Update Anchor': 'تحديث مرجع',
+      'Edit Anchor': 'تعديل مرجع',
+      'Anchor Name': 'اسم المرجع',
+      'Anchor Link': 'رابط المرجع',
+      'Scroll to target': 'التمرير إلى الهدف',
+      'Enter the anchor name without space': 'أدخل اسم المرجع بدون مسافات',
+      'Anchor name already exists.': 'اسم المرجع موجود بالفعل.',
+      // Export to Word
+      'Export to Word': 'تصدير إلى وورد',
+      'Ensure that all required dependent libraries are available for the plugin to work.': 'دڵنیابە لە بەردەستبوونی هەموو کتێبخانە پێویستە وابەستەکان بۆ کارکردنی پڵاگینەکە.',
+      // import from Word
+      'Import from Word': 'هاوردە کردن لە وۆرد',
+      'Please upload a valid file': 'تکایە فایلێکی دروست باربکە.',
+      'File size must be less than': 'پێویستە قەبارەی فایلەکە لە خوار',
+      //Code Snippet
+      'Code Snippet': 'پارچە کۆد',
+      'Insert Code Snippet': 'دانانی پارچە کۆد',
+      'Edit Code Snippet': 'دەستکاریکردنی پارچە کۆد'
     },
     direction: 'rtl'
   };
 
-})));
+}));
 //# sourceMappingURL=ku.js.map

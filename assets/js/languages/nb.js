@@ -1,20 +1,19 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
-
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
   /**
    * Norwegian
    */
+
   FE.LANGUAGE['nb'] = {
     translation: {
       // Place holder
@@ -24,6 +23,7 @@
       'Italic': 'Kursiv',
       'Underline': 'Understreket',
       'Strikethrough': 'Gjennomstreket',
+      'Size': 'Størrelse',
       // Main buttons
       'Insert': 'Sett',
       'Delete': 'Slett',
@@ -39,6 +39,7 @@
       'Font Size': "St\xF8rrelse",
       // Colors
       'Colors': 'Farger',
+      'Color': 'Farge',
       'Background': 'Bakgrunn',
       'Text': 'Tekst',
       'HEX Color': 'Heksefarge',
@@ -53,6 +54,7 @@
       // Style
       'Paragraph Style': 'Avsnittsstil',
       'Inline Style': "P\xE5 linje stil",
+      'Padding': 'Polstring',
       // Alignment
       'Align': 'Justering',
       'Align Left': 'Venstrejustert',
@@ -60,6 +62,11 @@
       'Align Right': "H\xF8yrejustert",
       'Align Justify': 'Juster alle linjer',
       'None': 'None',
+      'Alignment': 'Justering',
+      'Next': 'Neste',
+      'Previous': 'Tidligere',
+      'Advanced Options': 'Avanserte alternativer',
+      'Close': 'Lukke',
       // Lists
       'Ordered List': 'Ordnet liste',
       'Unordered List': 'Uordnet liste',
@@ -132,6 +139,30 @@
       'Align Middle': 'Justere midten',
       'Align Bottom': 'Justere bunnen',
       'Cell Style': 'Celle stil',
+      'Table Properties': 'Tabellegenskaper',
+      'Cell Properties': 'Celleegenskaper',
+      'Table Footer': 'Bordbunntekst',
+      'Dimensions': 'Dimensjoner',
+      'Custom background color input': 'Egendefinert bakgrunnsfargeinndata',
+      'Background color picker': 'Bakgrunnsfargevelger',
+      'Custom border color input': 'Egendefinert kantfargeinndata',
+      'Border color picker': 'Kantfargevelger',
+      'Border width': 'Kantbredde',
+      'Border style': 'Border stil',
+      'Border color': 'Kantfarge',
+      'Table width': 'Bordbredde',
+      'Table height': 'Bordhøyde',
+      'Left align': 'Venstrejustert',
+      'Center align': 'Midtjuster',
+      'Right align': 'Høyrejuster',
+      'solid': 'Heltrukket linje',
+      'dashed': 'Stiplet linje',
+      'dotted': 'Prikket linje',
+      'double': 'Dobbel linje',
+      'groove': 'Frest linje',
+      'ridge': 'Hevet linje',
+      'inset': 'Innvendig linje',
+      'outset': 'Utvendig linje',
       // Files
       'Upload File': 'Opplastingsfil',
       'Drop file': 'Slippe fil',
@@ -206,6 +237,7 @@
       'Clear Formatting': 'Fjerne formatering',
       // Save
       'Save': 'Lagre',
+      'Ok': 'OK',
       // Undo, redo
       'Undo': 'Angre',
       'Redo': "Utf\xF8r likevel",
@@ -265,14 +297,47 @@
       'Word Paste Detected': 'Ordpasta oppdages',
       // Character Counter
       'Characters': 'Tegn',
+      // Find and Replace
+      'Find and Replace': 'Finn og erstatt',
+      'Find': 'Finne',
+      'Replace with': 'Bytt ut med',
+      'Replace All': 'Erstatt alle',
+      'Match case': 'Matchetui',
+      'Whole words only': 'Kun hele ord',
       // More Buttons
       'More Text': 'Mer Tekst',
       'More Paragraph': 'Mer Avsnitt',
       'More Rich': 'Mer Rik',
-      'More Misc': 'Mer Diverse'
+      'More Misc': 'Mer Diverse',
+      'Border': 'Grense',
+      // selector icon
+      'Select Table': 'Velg tabell',
+      'Drag Table': 'Dra tabell',
+      'Select PageBreak': 'Velg sideskift',
+      'Drag PageBreak': 'Dra sideskift',
+      'Page Break': 'Sideskift',
+      //Link to anchor
+      'Insert Anchor': 'Sett inn anker',
+      'There are no entries matching': 'Det finnes ingen oppføringer som samsvarer',
+      'Update Anchor': 'Oppdater anker',
+      'Edit Anchor': 'Rediger anker',
+      'Anchor Name': 'Ankernavn',
+      'Anchor Link': 'Ankerlenke',
+      'Scroll to target': 'Rull til mål',
+      'Enter the anchor name without space': 'Skriv ankernavnet uten mellomrom',
+      'Anchor name already exists.': 'Ankernavnet finnes allerede.',
+      'Ensure that all required dependent libraries are available for the plugin to work.': 'Sørg for at alle nødvendige avhengige biblioteker er tilgjengelige for at programtillegget skal fungere.',
+      // Import_from_word
+      'Import from Word': 'Importer fra Word',
+      'Please upload a valid file': 'Last opp en gyldig fil.',
+      'File size must be less than': 'Filstørrelsen må være mindre enn',
+      //Code Snippet
+      'Code Snippet': 'Kodebit',
+      'Insert Code Snippet': 'Sett inn kodebit',
+      'Edit Code Snippet': 'Rediger kodebit'
     },
     direction: 'ltr'
   };
 
-})));
+}));
 //# sourceMappingURL=nb.js.map

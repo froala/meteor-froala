@@ -1,20 +1,19 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
-
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
   /**
    * Czech
    */
+
   FE.LANGUAGE['cs'] = {
     translation: {
       // Place holder
@@ -24,11 +23,11 @@
       'Italic': 'Kurzíva',
       'Underline': 'Podtržené',
       'Strikethrough': 'Přeškrtnuté',
+      'Size': 'Velikost',
       // Main buttons
       'Insert': 'Vložit',
       'Delete': 'Vymazat',
       'Cancel': 'Zrušit',
-      'OK': 'OK',
       'Back': 'Zpět',
       'Remove': 'Odstranit',
       'More': 'Více',
@@ -39,6 +38,7 @@
       'Font Size': 'Velikost písma',
       // Colors
       'Colors': 'Barvy',
+      'Color': 'Barva',
       'Background': 'Pozadí',
       'Text': 'Písmo',
       'HEX Color': 'Hex Barvy',
@@ -53,6 +53,7 @@
       // Style
       'Paragraph Style': 'Styl odstavce',
       'Inline Style': 'Styl řádku',
+      'Padding': 'Vycpávka',
       // Alignment
       'Align': 'Zarovnání',
       'Align Left': 'Zarovnat vlevo',
@@ -60,6 +61,11 @@
       'Align Right': 'Zarovnat vpravo',
       'Align Justify': 'Zarovnat do bloku',
       'None': 'Žádné',
+      'Alignment': 'Zarovnání',
+      'Next': 'Další',
+      'Previous': 'Předchozí',
+      'Advanced Options': 'Pokročilé možnosti',
+      'Close': 'Blízko',
       // Lists
       'Ordered List': 'Číslovaný seznam',
       'Default': 'Výchozí',
@@ -145,6 +151,30 @@
       'Align Middle': 'Zarovnat nastřed',
       'Align Bottom': 'Zarovnat naspodek',
       'Cell Style': 'Styl buňky',
+      'Table Properties': 'Vlastnosti tabulky',
+      'Cell Properties': 'Vlastnosti buňky',
+      'Table Footer': 'Zápatí tabulky',
+      'Dimensions': 'Rozměry',
+      'Custom background color input': 'Vlastní zadání barvy pozadí',
+      'Background color picker': 'Výběr barvy pozadí',
+      'Custom border color input': 'Vlastní zadání barvy okraje',
+      'Border color picker': 'Výběr barvy okraje',
+      'Border width': 'Šířka okraje',
+      'Border style': 'Styl ohraničení',
+      'Border color': 'Barva ohraničení',
+      'Table width': 'Šířka stolu',
+      'Table height': 'Výška stolu',
+      'Left align': 'Zarovnat doleva',
+      'Center align': 'Zarovnat na střed',
+      'Right align': 'Zarovnat vpravo',
+      'solid': 'Plná čára',
+      'dashed': 'Čárkovaná čára',
+      'double': 'Dvojitá',
+      'dotted': 'Tečkovaná čára',
+      'groove': 'Vydutá čára',
+      'ridge': 'Vystouplá čára',
+      'inset': 'Vnitřní čára',
+      'outset': 'Vnější čára',
       // Files
       'Upload File': 'Nahrát soubor',
       'Drop file': 'Přetáhněte sem soubor',
@@ -219,6 +249,7 @@
       'Clear Formatting': 'Vymazat formátování',
       // Save
       'Save': 'Uložit',
+      'OK': 'dobře',
       // Undo, redo
       'Undo': 'Zpět',
       'Redo': 'Znovu',
@@ -275,10 +306,45 @@
       'The pasted content is coming from a Microsoft Word document. Do you want to keep the format or clean it up?': 'Vložený obsah pochází z dokumentu Microsoft Word. Chcete formát uchovat nebo jej vyčistit?',
       'Keep': 'Uchovat',
       'Clean': 'Vyčistit',
-      'Word Paste Detected': 'Detekovaný obsah dokumentu Word'
+      'Word Paste Detected': 'Detekovaný obsah dokumentu Word',
+      //link to anchor
+      'Insert Anchor': 'Vložit kotvu',
+      'There are no entries matching': 'Neexistují žádné odpovídající položky',
+      'Update Anchor': 'Aktualizovat kotvu',
+      'Edit Anchor': 'Upravit kotvu',
+      'Anchor Name': 'Název kotvy',
+      'Anchor Link': 'Odkaz kotvy',
+      'Scroll to target': 'Přejít na cíl',
+      'Enter the anchor name without space': 'Zadejte název kotvy bez mezery',
+      'Anchor name already exists.': 'Název kotvy již existuje.',
+      //Find and Replace
+      'Find and Replace': 'Najít a nahradit',
+      'Find': 'Nalézt',
+      'Replace with': 'Nahradit za',
+      'Replace All': 'Nahradit vše',
+      'Match case': 'Případ zápasu',
+      'Whole words only': 'Pouze celá slova',
+      'Border': 'Pohraniční',
+      //selector icon
+      'Select Table': 'Vybrat tabulku',
+      'Drag Table': 'Přetáhnout tabulku',
+      'Select PageBreak': 'Vyberte zalomení stránky',
+      'Drag PageBreak': 'Přetáhnout zalomení stránky',
+      'Page Break': 'Konec stránky',
+      //Export to Word
+      'Export to Word': 'Exportovat do Wordu',
+      'Ensure that all required dependent libraries are available for the plugin to work.': 'Zajistěte, aby byly k dispozici všechny požadované závislé knihovny pro funkčnost pluginu.',
+      // Import_from_word
+      'Import from Word': 'Importovat z Wordu',
+      'Please upload a valid file': 'Nahrajte platný soubor.',
+      'File size must be less than': 'Velikost souboru musí být menší než',
+      //Code Snippet
+      'Code Snippet': 'Úryvek kódu',
+      'Insert Code Snippet': 'Vložit úryvek kódu',
+      'Edit Code Snippet': 'Upravit úryvek kódu'
     },
     direction: 'ltr'
   };
 
-})));
+}));
 //# sourceMappingURL=cs.js.map

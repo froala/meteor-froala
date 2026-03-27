@@ -1,20 +1,19 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
-
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
   /**
    * Dutch
    */
+
   FE.LANGUAGE['nl'] = {
     translation: {
       // Place holder
@@ -24,6 +23,7 @@
       'Italic': 'Cursief',
       'Underline': 'Onderstreept',
       'Strikethrough': 'Doorhalen',
+      'Size': 'Grootte',
       // Main buttons
       'Insert': 'Invoegen',
       'Delete': 'Verwijder',
@@ -37,10 +37,12 @@
       // Font
       'Font Family': 'Lettertype',
       'Font Size': 'Lettergrootte',
-      'Text color': 'Tekstkleur',
-      'Background color': 'Achtergrondkleur',
+      'Text Color': 'Tekstkleur',
+      'Background Color': 'Achtergrondkleur',
+      'Line Height': 'Lijnhoogte',
       // Colors
       'Colors': 'Kleuren',
+      'Color': 'Kleur',
       'Background': 'Achtergrond',
       'Text': 'Tekst',
       'HEX Color': 'HEX kleur',
@@ -55,6 +57,7 @@
       // Style
       'Paragraph Style': 'Paragraaf stijl',
       'Inline Style': 'Inline stijl',
+      'Padding': 'Opvulling',
       // Alignment
       'Align': 'Uitlijnen',
       'Align Left': 'Links uitlijnen',
@@ -62,11 +65,16 @@
       'Align Right': 'Rechts uitlijnen',
       'Align Justify': 'Uitvullen',
       'None': 'Geen',
+      'Alignment': 'Uitlijning',
+      'Next': 'Volgende',
+      'Previous': 'Vorig',
+      'Advanced Options': 'Geavanceerde opties',
+      'Close': 'Sluiten',
       // Lists
       'Ordered List': 'Geordende lijst',
       'Unordered List': 'Ongeordende lijst',
       'Default': 'Standaard',
-      'Lower alpha': 'Kleine letters',
+      'Lower Alpha': 'Kleine letters',
       'Lower Greek': 'Kleine Griekse letters',
       'Lower Roman': 'Kleine Romeinse cijfers',
       'Upper Alpha': 'Grote letters',
@@ -145,6 +153,30 @@
       'Align Middle': 'Uitlijnen midden',
       'Align Bottom': 'Onder uitlijnen',
       'Cell Style': 'Celstijl',
+      'Table Properties': 'Tabeleigenschappen',
+      'Cell Properties': 'Celeigenschappen',
+      'Table Footer': 'Tabelvoettekst',
+      'Dimensions': 'Afmetingen',
+      'Custom background color input': 'Aangepaste achtergrondkleurinvoer',
+      'Background color picker': 'Achtergrondkleurkiezer',
+      'Custom border color input': 'Aangepaste randkleurinvoer',
+      'Border color picker': 'Randkleurkiezer',
+      'Border width': 'Randbreedte',
+      'Border style': 'Randstijl',
+      'Border color': 'Randkleur',
+      'Table width': 'Tabelbreedte',
+      'Table height': 'Tabel hoogte',
+      'Left align': 'Links uitlijnen',
+      'Center align': 'Midden uitlijnen',
+      'Right align': 'Rechts uitlijnen',
+      'solid': 'Doorgetrokken lijn',
+      'dashed': 'Gestreepte lijn',
+      'dotted': 'Gestippelde lijn',
+      'double': 'Dubbele lijn',
+      'groove': 'Ingegroefde lijn',
+      'ridge': 'Verhoogde lijn',
+      'inset': 'Binnenste lijn',
+      'outset': 'Buitenste lijn',
       // Files
       'Upload File': 'Bestand uploaden',
       'Drop file': 'Sleep bestand',
@@ -219,6 +251,7 @@
       'Clear Formatting': 'Verwijder opmaak',
       // Save
       'Save': 'Opslaan',
+      'Ok': 'OK',
       // Undo, redo
       'Undo': 'Ongedaan maken',
       'Redo': 'Opnieuw',
@@ -278,14 +311,49 @@
       'Word Paste Detected': 'Word inhoud gedetecteerd',
       // Character Counter
       'Characters': 'Tekens',
+      // Find and Replace
+      'Find and Replace': 'Zoek en vervang',
+      'Find': 'Vinden',
+      'Replace with': 'Vervangen door',
+      'Replace All': 'Alles vervangen',
+      'Match case': 'Match geval',
+      'Whole words only': 'Alleen hele woorden',
       // More Buttons
       'More Text': 'Meer Tekst',
       'More Paragraph': 'Meer paragraaf',
       'More Rich': 'Meer Rijk',
-      'More Misc': 'Meer Misc'
+      'More Misc': 'Meer Misc',
+      'Border': 'Grens',
+      // selector icon
+      'Select Table': 'Selecteer Tabel',
+      'Drag Table': 'Sleep tabel',
+      'Select PageBreak': 'Selecteer Pagina-einde',
+      'Drag PageBreak': 'Sleep Pagina-einde',
+      'Page Break': 'Pagina-einde',
+      //Link to anchor
+      'Insert Anchor': 'Anker invoegen',
+      'There are no entries matching': 'Er zijn geen overeenkomende items',
+      'Update Anchor': 'Anker bijwerken',
+      'Edit Anchor': 'Anker bewerken',
+      'Anchor Name': 'Ankernaam',
+      'Anchor Link': 'Ankerkoppeling',
+      'Scroll to target': 'Scrol naar doel',
+      'Enter the anchor name without space': 'Voer de ankernaam in zonder spatie',
+      'Anchor name already exists.': 'Ankernaam bestaat al.',
+      // Export to Word
+      'Export to Word': 'Exporteren naar Word',
+      'Ensure that all required dependent libraries are available for the plugin to work.': 'Zorg ervoor dat alle vereiste afhankelijke bibliotheken beschikbaar zijn voor het functioneren van de plug-in.',
+      // Import_from_word
+      'Import from Word': 'Importeren uit Word',
+      'Please upload a valid file': 'Upload een geldig bestand.',
+      'File size must be less than': 'Bestandsgrootte moet kleiner zijn dan',
+      //Code Snippet
+      'Code Snippet': 'Codefragment',
+      'Insert Code Snippet': 'Codefragment invoegen',
+      'Edit Code Snippet': 'Codefragment bewerken'
     },
     direction: 'ltr'
   };
 
-})));
+}));
 //# sourceMappingURL=nl.js.map

@@ -1,29 +1,44 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
-
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
   /**
    * Italian
    */
+
   FE.LANGUAGE['it'] = {
     translation: {
       // Place holder
       'Type something': 'Digita qualcosa',
+      //Missing translations
+      'Text Color': 'Colore del testo',
+      'Background Color': 'Colore di sfondo',
+      'Inline Class': 'Classe inline',
+      'Default': 'Predefinito',
+      'Lower Alpha': 'Alfa minuscole',
+      'Lower Greek': 'Greche minuscole',
+      'Lower Roman': 'Romane minuscole',
+      'Upper Alpha': 'Alfa maiuscole',
+      'Upper Roman': 'Romane maiuscole',
+      'Circle': 'Cerchio',
+      'Disc': 'Disco',
+      'Square': 'Quadrato',
+      'Double': 'Doppio',
+      'Download PDF': 'Scarica il PDF',
       // Basic formatting
       'Bold': 'Grassetto',
       'Italic': 'Corsivo',
       'Underline': 'Sottolineato',
       'Strikethrough': 'Barrato',
+      'Size': 'Misurare',
       // Main buttons
       'Insert': 'Inserisci',
       'Delete': 'Cancella',
@@ -39,6 +54,7 @@
       'Font Size': 'Dimensione Carattere',
       // Colors
       'Colors': 'Colori',
+      'Color': 'Colore',
       'Background': 'Sfondo',
       'Text': 'Testo',
       'HEX Color': 'Colore Esadecimale',
@@ -53,6 +69,7 @@
       // Style
       'Paragraph Style': 'Stile Paragrafo',
       'Inline Style': 'Stile in Linea',
+      'Padding': 'Imbottitura',
       // Alignment
       'Align': 'Allinea',
       'Align Left': 'Allinea a Sinistra',
@@ -60,6 +77,11 @@
       'Align Right': 'Allinea a Destra',
       'Align Justify': 'Giustifica',
       'None': 'Nessuno',
+      'Alignment': 'Allineamento',
+      'Next': 'Avanti',
+      'Previous': 'Precedente',
+      'Advanced Options': 'Opzioni avanzate',
+      'Close': 'Chiudi',
       // Lists
       'Ordered List': 'Elenchi Numerati',
       'Unordered List': 'Elenchi Puntati',
@@ -132,6 +154,30 @@
       'Align Middle': 'Allinea al Centro',
       'Align Bottom': 'Allinea in Basso',
       'Cell Style': 'Stile Cella',
+      'Table Properties': 'Proprietà Tabella',
+      'Cell Properties': 'Proprietà Cella',
+      'Table Footer': 'Piè di pagina della tabella',
+      'Dimensions': 'Dimensioni',
+      'Custom background color input': 'Inserimento colore di sfondo personalizzato',
+      'Background color picker': 'Selettore colore di sfondo',
+      'Custom border color input': 'Inserimento colore del bordo personalizzato',
+      'Border color picker': 'Selettore colore del bordo',
+      'Border width': 'Larghezza del bordo',
+      'Border style': 'Stile del bordo',
+      'Border color': 'Colore del bordo',
+      'Table width': 'Larghezza del tabella',
+      'Table height': 'Altezza del tabella',
+      'Left align': 'Allinea a sinistra',
+      'Center align': 'Allinea al centro',
+      'Right align': 'Allinea a destra',
+      'solid': 'Linea continua',
+      'dashed': 'Linea tratteggiata',
+      'dotted': 'Linea puntinata',
+      'double': 'Doppio',
+      'groove': 'Linea scanalata',
+      'ridge': 'Linea in rilievo',
+      'inset': 'Linea interna',
+      'outset': 'Linea esterna',
       // Files
       'Upload File': 'Carica File',
       'Drop file': 'Rilascia file',
@@ -206,6 +252,7 @@
       'Clear Formatting': 'Cancella Formattazione',
       // Save
       'Save': 'Salvare',
+      'Ok': 'Ok',
       // Undo, redo
       'Undo': 'Annulla',
       'Redo': 'Ripeti',
@@ -264,15 +311,51 @@
       'Clean': 'Pulisci',
       'Word Paste Detected': "\xC8 stato rilevato un incolla da Word",
       // Character Counter
-      'Characters': 'Personaggi',
+      'Characters': 'Caratteri',
+      'Words': 'Parole',
+      // Find and Replace
+      'Find and Replace': 'Trova e sostituisci',
+      'Find': 'Trovare',
+      'Replace with': 'Sostituisci con',
+      'Replace All': 'Sostituisci tutto',
+      'Match case': 'Caso di corrispondenza',
+      'Whole words only': 'Solo parole intere',
       // More Buttons
-      'More Text': 'Altro testo',
-      'More Paragraph': 'Altro paragrafo',
+      'More Text': 'Altro Testo',
+      'More Paragraph': 'Altro Paragrafo',
       'More Rich': 'Altro Ricco',
-      'More Misc': 'Altro Varie'
+      'More Misc': 'Altro Varie',
+      'Border': 'Confine',
+      // selector icon
+      'Select Table': 'Seleziona tabella',
+      'Drag Table': 'Trascina tabella',
+      'Select PageBreak': 'Seleziona interruzione di pagina',
+      'Drag PageBreak': 'Trascina interruzione di pagina',
+      'Page Break': 'Interruzione di pagina',
+      //Link to anchor
+      'Insert Anchor': 'Inserisci ancoraggio',
+      'There are no entries matching': 'Non ci sono voci corrispondenti',
+      'Update Anchor': 'Aggiorna ancoraggio',
+      'Edit Anchor': 'Modifica ancoraggio',
+      'Anchor Name': 'Nome ancoraggio',
+      'Anchor Link': 'Link ancoraggio',
+      'Scroll to target': 'Scorri fino all\'obiettivo',
+      'Enter the anchor name without space': 'Inserisci il nome dell\'ancoraggio senza spazi',
+      'Anchor name already exists.': 'Il nome dell\'ancoraggio esiste già.',
+      // Export to Word
+      'Export to Word': 'Esporta in Word',
+      'Ensure that all required dependent libraries are available for the plugin to work.': 'Assicurati che tutte le librerie dipendenti richieste siano disponibili affinché il plugin funzioni.',
+      // Import_from_word
+      'Import from Word': 'Importa da Word',
+      'Please upload a valid file': 'Carica un file valido.',
+      'File size must be less than': 'La dimensione del file deve essere inferiore a',
+      //Code Snippet
+      'Code Snippet': 'Frammento di Codice',
+      'Insert Code Snippet': 'Inserisci frammento di codice',
+      'Edit Code Snippet': 'Modifica frammento di codice'
     },
     direction: 'ltr'
   };
 
-})));
+}));
 //# sourceMappingURL=it.js.map

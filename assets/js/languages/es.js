@@ -1,29 +1,48 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
-
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
   /**
    * Spanish
    */
+
   FE.LANGUAGE['es'] = {
     translation: {
       // Place holder
       'Type something': 'Escriba algo',
+      // Missing translations
+      'More Text': 'Más texto',
+      'Text Color': 'Color de texto',
+      'Background Color': 'Color de fondo',
+      'Inline Class': 'Clase en línea',
+      'Default': 'Defecto',
+      'Lower Alpha': 'Alpha inferiores',
+      'Lower Greek': 'Griegas inferiores',
+      'Lower Roman': 'Romanas inferiores',
+      'Upper Alpha': 'Alpha superiores',
+      'Upper Roman': 'Romanas superiores',
+      'Circle': 'Circulo',
+      'Disc': 'Dto',
+      'Square': 'Cuadrado',
+      'Single': 'Soltero',
+      'Double': 'Doble',
+      'More Rich': 'Más Rico',
+      'More Misc': 'Más Diverso',
+      'Download PDF': 'Descargar PDF',
       // Basic formatting
       'Bold': 'Negrita',
       'Italic': "It\xE1lica",
       'Underline': 'Subrayado',
       'Strikethrough': 'Tachado',
+      'Size': 'Tamaño',
       // Main buttons
       'Insert': 'Insertar',
       'Delete': 'Borrar',
@@ -39,6 +58,7 @@
       'Font Size': "Tama\xF1o de fuente",
       // Colors
       'Colors': 'Colores',
+      'Color': 'Color',
       'Background': 'Fondo',
       'Text': 'Texto',
       'HEX Color': 'Color hexadecimal',
@@ -54,6 +74,7 @@
       // Style
       'Paragraph Style': "Estilo de p\xE1rrafo",
       'Inline Style': "Estilo en l\xEDnea",
+      'Padding': 'Relleno',
       // Alignment
       'Align': 'Alinear',
       'Align Left': 'Alinear a la izquierda',
@@ -61,6 +82,11 @@
       'Align Right': 'Alinear a la derecha',
       'Align Justify': 'Justificar',
       'None': 'Ninguno',
+      'Alignment': 'Alineación',
+      'Next': 'Próximo',
+      'Previous': 'Previo',
+      'Advanced Options': 'Opciones avanzadas',
+      'Close': 'Cerrar',
       // Lists
       'Ordered List': 'Lista ordenada',
       'Unordered List': 'Lista desordenada',
@@ -133,6 +159,30 @@
       'Align Middle': 'Alinear media',
       'Align Bottom': 'Alinear abajo',
       'Cell Style': 'Estilo de celda',
+      'Table Properties': 'Propiedades de la tabla',
+      'Cell Properties': 'Propiedades de la celda',
+      'Table Footer': 'Pie de página',
+      'Dimensions': 'Dimensiones',
+      'Custom background color input': 'Entrada de color de fondo personalizada',
+      'Background color picker': 'Selector de color de fondo',
+      'Custom border color input': 'Entrada de color de borde personalizada',
+      'Border color picker': 'Selector de color de borde',
+      'Border width': 'Ancho del borde',
+      'Border style': 'Estilo del borde',
+      'Border color': 'Color del borde',
+      'Table width': 'Ancho de la mesa',
+      'Table height': 'Altura de la mesa',
+      'Left align': 'Alinear a la izquierda',
+      'Center align': 'Alinear al centro',
+      'Right align': 'Alinear a la derecha',
+      'solid': 'Línea sólida',
+      'dashed': 'Línea discontinua',
+      'double': 'Doble',
+      'dotted': 'Línea punteada',
+      'groove': 'Línea ranurada',
+      'ridge': 'Línea en relieve',
+      'inset': 'Línea interior',
+      'outset': 'Línea exterior',
       // Files
       'Upload File': 'Subir archivo',
       'Drop file': 'Soltar archivo',
@@ -205,6 +255,8 @@
       'Insert Horizontal Line': "Insertar l\xEDnea horizontal",
       // Clear formatting
       'Clear Formatting': 'Quitar el formato',
+      // Save
+      'Ok': 'Ok',
       // Undo, redo
       'Undo': 'Deshacer',
       'Redo': 'Rehacer',
@@ -261,10 +313,45 @@
       'The pasted content is coming from a Microsoft Word document. Do you want to keep the format or clean it up?': 'El contenido pegado viene de un documento de Microsoft Word. ¿Quieres mantener el formato o limpiarlo?',
       'Keep': 'Guardar',
       'Clean': 'Limpiar',
-      'Word Paste Detected': 'Palabra detectada'
+      'Word Paste Detected': 'Palabra detectada',
+      //Find and Replace
+      'Find and Replace': 'Buscar y reemplazar',
+      'Find': 'Buscar',
+      'Replace with': 'Reemplazar con',
+      'Replace All': 'Reemplazar todo',
+      'Match case': 'caso de partido',
+      'Whole words only': 'Solo palabras completas',
+      'Border': 'Borde',
+      //selector icon
+      'Select Table': 'Seleccionar tabla',
+      'Drag Table': 'Arrastrar tabla',
+      'Select PageBreak': 'Seleccionar salto de página',
+      'Drag PageBreak': 'Arrastrar salto de página',
+      'Page Break': 'Salto de página',
+      // link to anchor
+      'Insert Anchor': 'Insertar ancla',
+      'There are no entries matching': 'No hay entradas coincidentes',
+      'Update Anchor': 'Actualizar ancla',
+      'Edit Anchor': 'Editar ancla',
+      'Anchor Name': 'Nombre del ancla',
+      'Anchor Link': 'Enlace del ancla',
+      'Scroll to target': 'Desplazarse al objetivo',
+      'Enter the anchor name without space': 'Ingrese el nombre del ancla sin espacio',
+      'Anchor name already exists.': 'El nombre del ancla ya existe.',
+      // Export to Word
+      'Export to Word': 'Exportar a Word',
+      'Ensure that all required dependent libraries are available for the plugin to work.': 'Asegúrese de que todas las librerías dependientes requeridas estén disponibles para que el plugin funcione.',
+      // Import_from_word
+      'Import from Word': 'Importar de Word',
+      'Please upload a valid file': 'Por favor, suba un archivo válido.',
+      'File size must be less than': 'El tamaño del archivo debe ser menor de',
+      //Code Snippet
+      'Code Snippet': 'Fragmento de Código',
+      'Insert Code Snippet': 'Insertar Fragmento de Código',
+      'Edit Code Snippet': 'Editar Fragmento de Código'
     },
     direction: 'ltr'
   };
 
-})));
+}));
 //# sourceMappingURL=es.js.map

@@ -1,20 +1,19 @@
 /*!
- * froala_editor v3.1.0 (https://www.froala.com/wysiwyg-editor)
+ * froala_editor v5.0.1 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
- * Copyright 2014-2020 Froala Labs
+ * Copyright 2014-2026 Froala Labs
  */
 
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('froala-editor')) :
   typeof define === 'function' && define.amd ? define(['froala-editor'], factory) :
-  (factory(global.FroalaEditor));
-}(this, (function (FE) { 'use strict';
-
-  FE = FE && FE.hasOwnProperty('default') ? FE['default'] : FE;
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.FroalaEditor));
+})(this, (function (FE) { 'use strict';
 
   /**
    * Estonian
    */
+
   FE.LANGUAGE['et'] = {
     translation: {
       // Place holder
@@ -24,6 +23,7 @@
       'Italic': 'Kursiiv',
       'Underline': 'Allajoonitud',
       'Strikethrough': "L\xE4bikriipsutatud",
+      'Size': 'Suurus',
       // Main buttons
       'Insert': 'Lisa',
       'Delete': 'Kustuta',
@@ -39,6 +39,7 @@
       'Font Size': 'Fondi suurus',
       // Colors
       'Colors': "V\xE4rvid",
+      'Color': 'Värv',
       'Background': 'Taust',
       'Text': 'Tekst',
       'HEX Color': 'Hex värvi',
@@ -53,6 +54,7 @@
       // Style
       'Paragraph Style': 'Paragrahv stiil',
       'Inline Style': "J\xE4rjekorras stiil",
+      'Padding': 'Polsterdus',
       // Alignment
       'Align': 'Joonda',
       'Align Left': 'Joonda vasakule',
@@ -60,6 +62,11 @@
       'Align Right': 'Joonda paremale',
       'Align Justify': "R\xF6\xF6pjoondus",
       'None': "Mitte \xFCkski",
+      'Alignment': 'Joondamine',
+      'Next': 'Edasi',
+      'Previous': 'Eelmine',
+      'Advanced Options': 'Täpsemad suvandid',
+      'Close': 'Sule',
       // Lists
       'Ordered List': 'Tellitud nimekirja',
       'Unordered List': 'Tavalise nimekirja',
@@ -132,6 +139,30 @@
       'Align Middle': 'Joonda keskmine',
       'Align Bottom': "Joonda P\xF5hi",
       'Cell Style': 'Lahter stiili',
+      'Table Properties': 'Tabeli omadused',
+      'Cell Properties': 'Lahtri omadused',
+      'Table Footer': 'Tabeli jalus',
+      'Dimensions': 'Mõõtmed',
+      'Custom background color input': 'Kohandatud taustavärvi sisend',
+      'Background color picker': 'Taustavärvi valija',
+      'Custom border color input': 'Kohandatud ääre värvi sisend',
+      'Border color picker': 'Ääriste värvivalija',
+      'Border width': 'Piiri laius',
+      'Border style': 'Ääriste stiil',
+      'Border color': 'Ääriste värv',
+      'Table width': 'Laua laius',
+      'Table height': 'Laua kõrgus',
+      'Left align': 'Vasak joondus',
+      'Center align': 'Joonda keskele',
+      'Right align': 'Joonda paremale',
+      'solid': 'Línea sólida',
+      'dashed': 'Línea discontinua',
+      'dotted': 'Línea punteada',
+      'double': 'Línea doble',
+      'groove': 'Línea ranurada',
+      'ridge': 'Línea en relieve',
+      'inset': 'Línea interior',
+      'outset': 'Línea exterior',
       // Files
       'Upload File': "Lae fail \xFCles",
       'Drop file': 'Aseta fail',
@@ -206,6 +237,7 @@
       'Clear Formatting': 'Eemalda formaatimine',
       // Save
       'Save': 'Salvesta',
+      'Ok': 'Ok',
       // Undo, redo
       'Undo': "V\xF5ta tagasi",
       'Redo': 'Tee uuesti',
@@ -265,14 +297,49 @@
       'Word Paste Detected': 'Avastatud sõna pasta',
       // Character Counter 
       'Characters': 'Tähemärgid',
+      //Find and Replace
+      'Find and Replace': 'Otsige ja asendage',
+      'Find': 'Otsi',
+      'Replace with': 'Asenda vastu',
+      'Replace All': 'Asenda kõik',
+      'Match case': 'Matši juhtum',
+      'Whole words only': 'Ainult terved sõnad',
       // More Buttons
       'More Text': 'Rohkem teksti',
       'More Paragraph': 'Rohkem lõiku',
       'More Rich': 'Rohkem Rikas',
-      'More Misc': 'Rohkem Misc'
+      'More Misc': 'Rohkem Misc',
+      'Border': 'Piir',
+      //selector icon
+      'Select Table': 'Valige Tabel',
+      'Drag Table': 'Lohistage tabel',
+      'Select PageBreak': 'Valige Lehekülje katkestus',
+      'Drag PageBreak': 'lohistage Lehekülje katkestus',
+      'Page Break': 'Lehekülje paus',
+      // link to anchor
+      'Insert Anchor': 'Lisa ankur',
+      'There are no entries matching': 'Sobivaid kirjeid pole',
+      'Update Anchor': 'Uuenda ankur',
+      'Edit Anchor': 'Muuda ankur',
+      'Anchor Name': 'Ankrunimi',
+      'Anchor Link': 'Ankru link',
+      'Scroll to target': 'Kerige sihtkohta',
+      'Enter the anchor name without space': 'Sisestage ankrunimi ilma tühikuteta',
+      'Anchor name already exists.': 'Ankrunimi on juba olemas.',
+      // Export to Word
+      'Export to Word': 'Ekspordi sõnasse',
+      'Ensure that all required dependent libraries are available for the plugin to work.': 'Veenduge, et kõik vajalikud sõltuvad teegid oleksid pistikprogrammi töötamiseks saadaval.',
+      // Import_from_word
+      'Import from Word': 'Impordi Wordist',
+      'Please upload a valid file': 'Palun laadi üles kehtiv fail.',
+      'File size must be less than': 'Faili suurus peab olema väiksem kui',
+      //Code Snippet
+      'Code Snippet': 'Koodilõik',
+      'Insert Code Snippet': 'Sisesta koodilõik',
+      'Edit Code Snippet': 'Muuda koodilõiku'
     },
     direction: 'ltr'
   };
 
-})));
+}));
 //# sourceMappingURL=et.js.map
