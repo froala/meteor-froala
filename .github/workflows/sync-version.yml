@@ -61,12 +61,12 @@ jobs:
             "https://x-access-token:${GIT_TOKEN}@github.com/froala/wysiwyg-editor.git" \
             /tmp/wysiwyg-main
 
-          mkdir -p app/assets/javascripts
-          mkdir -p app/assets/stylesheets
+          mkdir -p assets/js
+          mkdir -p assets/css
           
           
-          rsync -av --delete /tmp/wysiwyg-main/js/ assets/javascripts/
-          rsync -av --delete /tmp/wysiwyg-main/css/ assets/stylesheets/
+          rsync -av --delete /tmp/wysiwyg-main/js/ assets/js/
+          rsync -av --delete /tmp/wysiwyg-main/css/ assets/css/
 
 
       - name: Commit & push
@@ -74,7 +74,7 @@ jobs:
           git config user.name "froala-travis-bot"
           git config user.email "froala_git_travis_bot@idera.com"
 
-          git add app/assets/javascripts app/assets/stylesheets package.js
+          git add assets/js assets/css package.js
 
           git commit -m "chore: release v${VERSION}" || echo "Nothing to commit"
           git push origin "$BRANCH"
