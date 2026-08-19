@@ -50,7 +50,7 @@ jobs:
 
       - name: Update package.js
         run: |
-         sed -i -E "s/version:\s*['\"][^'\"]+['\"]/version: '${VERSION}'/" package.js
+         sed -i -E "s/version:\s*['\"][^'\"]+['\"]/version: \"${VERSION}\"/" package.js
 
 
       - name: Sync assets
